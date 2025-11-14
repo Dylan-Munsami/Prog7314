@@ -58,6 +58,7 @@
                 android:alpha="0.8" />
 
             <!-- Quick Stats Card -->
+            <!-- Quick Stats Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,7 +74,7 @@
                     android:padding="20dp"
                     android:weightSum="3">
 
-                    <!-- Orders Today -->
+                    <!-- Total Orders -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -82,24 +83,24 @@
                         android:gravity="center">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:id="@+id/tvOrdersToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/orders_today"
-                            android:textSize="12sp"
-                            android:textColor="@android:color/white"
-                            android:alpha="0.7" />
+                            android:text="Total Orders"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.7" />
                     </LinearLayout>
 
-                    <!-- Points -->
-                    <!-- Points -->
+                    <!-- Reward Points -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -107,7 +108,6 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <!-- Dynamic Points -->
                         <TextView
                             android:id="@+id/tvRewardPoints"
                             android:layout_width="wrap_content"
@@ -117,7 +117,6 @@
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
 
-                        <!-- Label -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -125,9 +124,7 @@
                             android:textSize="12sp"
                             android:textColor="@android:color/white"
                             android:alpha="0.7" />
-
                     </LinearLayout>
-
 
                     <!-- Delivery Time -->
                     <LinearLayout
@@ -153,8 +150,10 @@
                             android:textColor="@android:color/white"
                             android:alpha="0.7" />
                     </LinearLayout>
+
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
 
             <!-- Active Order Card (if any) -->
             <com.google.android.material.card.MaterialCardView

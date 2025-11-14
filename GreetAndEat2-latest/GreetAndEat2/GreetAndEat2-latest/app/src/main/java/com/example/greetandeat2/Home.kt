@@ -10,13 +10,21 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.example.greetandeat2.repository.OfflineRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class Home : BaseActivity() {
+
+    private lateinit var tvTotalOrders: TextView
+    private lateinit var tvRewardPoints: TextView
+    private lateinit var repository: OfflineRepository
+    private val auth = FirebaseAuth.getInstance()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_base_drawer)
 
         // Inflate Home layout into base drawer
@@ -33,6 +41,9 @@ class Home : BaseActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Initialize repository
+        repository = OfflineRepository(com.example.greetandeat2.data.AppDatabase.getInstance(this))
 
         // --- Quick Action Cards ---
         findViewById<CardView>(R.id.cardOrderFood).setOnClickListener {
@@ -57,23 +68,36 @@ class Home : BaseActivity() {
         }
 
         // --- User Authentication Check ---
-        val currentUser = FirebaseAuth.getInstance().currentUser
+        val currentUser = auth.currentUser
         if (currentUser == null) {
             startActivity(Intent(this, Login::class.java))
             finish()
             return
         }
 
-        // --- Update Reward Points Dynamically ---
+        // --- Find TextViews for dashboard cards ---
+        tvTotalOrders = findViewById(R.id.tvOrdersToday) // previously "Orders Today" text
+        tvRewardPoints = findViewById(R.id.tvRewardPoints)
+
+        // --- Update dashboard cards ---
+        updateTotalOrders(currentUser.uid)
         updateRewardPoints()
     }
 
+    // --- Count total orders for logged-in user ---
+    private fun updateTotalOrders(userId: String) {
+        CoroutineScope(Dispatchers.Main).launch {
+            val allOrders = repository.getOrders() // get all orders
+            val userOrders = allOrders.filter { it.userId == userId }
+            tvTotalOrders.text = userOrders.size.toString()
+        }
+    }
+
+    // --- Calculate reward points dynamically ---
     private fun updateRewardPoints() {
-        val tvRewardPoints = findViewById<TextView>(R.id.tvRewardPoints)
-        val user = FirebaseAuth.getInstance().currentUser
+        val user = auth.currentUser
 
         if (user != null) {
-            // Build rewards list (matching RewardsActivity)
             val rewardsList = listOf(
                 "first_login",
                 "first_order",
@@ -83,7 +107,7 @@ class Home : BaseActivity() {
             ).map { key ->
                 Reward(
                     title = key,
-                    description = "", // ✅ Correct parameter name
+                    description = "",
                     points = when (key) {
                         "first_login" -> 100
                         "first_order" -> 200
@@ -93,16 +117,11 @@ class Home : BaseActivity() {
                         else -> 0
                     },
                     icon = 0,
-                    level = if (RewardsManager.isRewardUnlocked(
-                            this,
-                            key
-                        )
-                    ) RewardLevel.GOLD else RewardLevel.SILVER
+                    level = if (RewardsManager.isRewardUnlocked(this, key)) RewardLevel.GOLD else RewardLevel.SILVER
                 )
             }
 
-            val totalPoints =
-                rewardsList.filter { it.level == RewardLevel.GOLD }.sumOf { it.points }
+            val totalPoints = rewardsList.filter { it.level == RewardLevel.GOLD }.sumOf { it.points }
             tvRewardPoints.text = totalPoints.toString()
         } else {
             tvRewardPoints.text = "0"
