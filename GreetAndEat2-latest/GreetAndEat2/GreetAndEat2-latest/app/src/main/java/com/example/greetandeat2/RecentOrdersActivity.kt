@@ -88,10 +88,11 @@ class RecentOrdersActivity : AppCompatActivity() {
                     }
 
                     val statusText = TextView(this@RecentOrdersActivity).apply {
-                        text = "Status: ${order.status}"
+                        text = "Status: Completed"  // ✅ Force status to Completed
                         textSize = 14f
                         setTextColor(resources.getColor(android.R.color.white))
                     }
+
 
                     layout.addView(restaurantText)
                     layout.addView(itemsText)
