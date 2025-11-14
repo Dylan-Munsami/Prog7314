@@ -103,11 +103,28 @@
                 android:layout_marginTop="20dp"
                 android:visibility="gone">
 
+                <!-- Saved Cards Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saved Cards"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgSavedCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <!-- Manual Card Entry -->
                 <EditText
                     android:id="@+id/etCardName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cardholder Name" />
+                    android:hint="Cardholder Name"
+                    android:layout_marginTop="16dp"/>
 
                 <EditText
                     android:id="@+id/etCardNumber"

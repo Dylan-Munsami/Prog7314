@@ -1,6 +1,7 @@
 package com.example.greetandeat2
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -48,23 +49,22 @@ class PaymentActivity : BaseActivity() {
         val btnPay = findViewById<Button>(R.id.btnPay)
         val backButton = findViewById<Button>(R.id.btnBack)
 
-        // 🔹 Payment method UI elements
+        // Payment method UI
         val rbCash = findViewById<RadioButton>(R.id.rbCash)
         val rbCard = findViewById<RadioButton>(R.id.rbCard)
         val cardSection = findViewById<LinearLayout>(R.id.cardSection)
+        val rgSavedCards = findViewById<RadioGroup>(R.id.rgSavedCards)
 
         val etCardName = findViewById<EditText>(R.id.etCardName)
         val etCardNumber = findViewById<EditText>(R.id.etCardNumber)
         val etExpiry = findViewById<EditText>(R.id.etExpiry)
         val etCVV = findViewById<EditText>(R.id.etCVV)
 
-        // 🔹 Toggle card form visibility
-        rbCash.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) cardSection.visibility = View.GONE
-        }
-
+        // Toggle card form
+        rbCash.setOnCheckedChangeListener { _, isChecked -> if (isChecked) cardSection.visibility = View.GONE }
         rbCard.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) cardSection.visibility = View.VISIBLE
+            cardSection.visibility = if (isChecked) View.VISIBLE else View.GONE
+            if (isChecked) loadSavedCards()
         }
 
         backButton.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
@@ -89,34 +89,42 @@ class PaymentActivity : BaseActivity() {
             }
 
             val isCard = rbCard.isChecked
+            var selectedCard: String? = null
 
-            // 🔹 Validate card details if paying with card
             if (isCard) {
-                if (etCardName.text.isBlank() ||
-                    etCardNumber.text.length < 8 ||
-                    etExpiry.text.isBlank() ||
-                    etCVV.text.length < 3
-                ) {
-                    Toast.makeText(this, "Please enter valid card details.", Toast.LENGTH_LONG).show()
-                    return@setOnClickListener
+                // Check saved cards selection
+                val checkedId = rgSavedCards.checkedRadioButtonId
+                selectedCard = if (checkedId != -1) {
+                    val rb = findViewById<RadioButton>(checkedId)
+                    rb.tag as String
+                } else {
+                    // fallback to manual entry
+                    val number = etCardNumber.text.toString()
+                    val name = etCardName.text.toString()
+                    val expiry = etExpiry.text.toString()
+                    val cvv = etCVV.text.toString()
+                    if (number.length < 8 || name.isBlank() || expiry.isBlank() || cvv.length < 3) {
+                        Toast.makeText(this, "Please enter valid card details or select a saved card.", Toast.LENGTH_LONG).show()
+                        return@setOnClickListener
+                    }
+                    "$number|$name|$expiry"
                 }
             }
 
             val paymentMethod = if (isCard) "Card Payment" else "Cash on Delivery"
             Toast.makeText(this, "Processing $paymentMethod...", Toast.LENGTH_SHORT).show()
 
-            // 🔥 Unlock rewards
+            // Unlock rewards
             if (!RewardsManager.isRewardUnlocked(this, "first_order")) {
                 RewardsManager.unlockReward(this, "first_order")
                 Toast.makeText(this, "🎉 You unlocked the 'First Order' reward!", Toast.LENGTH_LONG).show()
             }
-
             if (total > 500 && !RewardsManager.isRewardUnlocked(this, "big_spender")) {
                 RewardsManager.unlockReward(this, "big_spender")
                 Toast.makeText(this, "💰 You unlocked the 'Big Spender' reward!", Toast.LENGTH_LONG).show()
             }
 
-            // 🔥 Create local order
+            // Create local order
             val orderId = "ORD${System.currentTimeMillis()}"
             val order = LocalOrder(
                 orderId = orderId,
@@ -130,15 +138,10 @@ class PaymentActivity : BaseActivity() {
                 repository.placeOrder(order)
                 repository.clearCart()
 
-                // 🔥 Sync if online
                 if (NetworkUtils.isOnline(this@PaymentActivity)) {
                     val syncRequest = OneTimeWorkRequestBuilder<SyncWorker>()
-                        .setConstraints(
-                            Constraints.Builder()
-                                .setRequiredNetworkType(NetworkType.CONNECTED)
-                                .build()
-                        ).build()
-
+                        .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())
+                        .build()
                     WorkManager.getInstance(this@PaymentActivity).enqueue(syncRequest)
                 }
             }
@@ -149,6 +152,35 @@ class PaymentActivity : BaseActivity() {
             intent.putExtra("orderId", orderId)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+        }
+    }
+
+    private fun loadSavedCards() {
+        val userPrefs = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val currentUserEmail = userPrefs.getString("lastUserEmail", "") ?: return
+        val safeEmail = currentUserEmail.replace(".", "_")
+        val prefs = getSharedPreferences("user_cards_$safeEmail", Context.MODE_PRIVATE)
+        val cardsSet = prefs.getStringSet("cards", emptySet()) ?: emptySet()
+
+        val rgSavedCards = findViewById<RadioGroup>(R.id.rgSavedCards)
+        rgSavedCards.removeAllViews()
+
+        if (cardsSet.isEmpty()) {
+            val emptyText = TextView(this)
+            emptyText.text = "No saved cards. Enter card details below."
+            rgSavedCards.addView(emptyText)
+        } else {
+            cardsSet.forEach { card ->
+                val parts = card.split("|")
+                val number = parts.getOrElse(0) { "" }
+                val name = parts.getOrElse(1) { "" }
+                val expiry = parts.getOrElse(2) { "" }
+
+                val rb = RadioButton(this)
+                rb.text = "**** **** **** ${number.takeLast(4)} | $name | Exp: $expiry"
+                rb.tag = card
+                rgSavedCards.addView(rb)
+            }
         }
     }
 }
