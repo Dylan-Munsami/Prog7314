@@ -14,6 +14,7 @@ class PaymentMethodsActivity : AppCompatActivity() {
 
     private lateinit var cardListLayout: LinearLayout
     private lateinit var addCardButton: Button
+    private lateinit var backButton: Button
 
     private lateinit var currentUserEmail: String
     private val prefsPrefix = "user_cards_"
@@ -24,6 +25,10 @@ class PaymentMethodsActivity : AppCompatActivity() {
 
         cardListLayout = findViewById(R.id.cardListLayout)
         addCardButton = findViewById(R.id.addCardButton)
+        backButton = findViewById(R.id.backButton)
+
+        // Back button functionality
+        backButton.setOnClickListener { finish() }
 
         // Get current user
         val userPrefs = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)

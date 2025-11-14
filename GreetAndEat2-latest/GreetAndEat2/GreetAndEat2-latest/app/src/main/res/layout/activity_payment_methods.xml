@@ -1,35 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F0F0F0"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Scrollable list of cards -->
-    <ScrollView
-        android:id="@+id/scrollView"
+    <!-- Background image -->
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/addCardButton">
+        android:src="@drawable/cofee"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background" />
 
+    <!-- Semi-transparent overlay for readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Main layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Scrollable list of cards -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomLayout"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/cardListLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="16dp"/>
+        </ScrollView>
+
+        <!-- Bottom buttons row -->
         <LinearLayout
-            android:id="@+id/cardListLayout"
-            android:orientation="vertical"
+            android:id="@+id/bottomLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
-            android:paddingBottom="80dp"/>
-    </ScrollView>
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
 
-    <!-- Add Card Button at bottom -->
-    <Button
-        android:id="@+id/addCardButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Card"
-        android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white"
-        android:padding="16dp"
-        android:textSize="16sp"/>
-</RelativeLayout>
+            <!-- Back Button -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_purple_button"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Add Card Button -->
+            <Button
+                android:id="@+id/addCardButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Card"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_purple_button"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
