@@ -1,16 +1,15 @@
 package com.example.greetandeat2.repository
 
-
 import com.example.greetandeat2.data.CartItem
 import com.example.greetandeat2.data.LocalOrder
-import com.example.greetandeat2.data.*
-import kotlinx.coroutines.flow.Flow
+import com.example.greetandeat2.data.AppDatabase
 
 class OfflineRepository(private val database: AppDatabase) {
+
     private val cartDao = database.cartDao()
     private val orderDao = database.orderDao()
 
-    // Cart operations
+    // --- Cart operations ---
     suspend fun addToCart(cartItem: CartItem) {
         cartDao.insertCartItem(cartItem)
     }
@@ -35,16 +34,20 @@ class OfflineRepository(private val database: AppDatabase) {
         cartDao.markAsSynced(itemId)
     }
 
-    // Order operations - use LocalOrder
-    suspend fun placeOrder(order: LocalOrder) {  // ✅ Fixed typo and type
+    // --- Order operations ---
+    suspend fun placeOrder(order: LocalOrder) {
         orderDao.insertOrder(order)
     }
 
-    suspend fun getOrders(): List<LocalOrder> {  // ✅ Use LocalOrder
+    suspend fun getOrders(): List<LocalOrder> {
         return orderDao.getAllOrders()
     }
 
-    suspend fun getUnsyncedOrders(): List<LocalOrder> {  // ✅ Use LocalOrder
+    suspend fun getOrdersForUser(userId: String): List<LocalOrder> { // ✅ New
+        return orderDao.getOrdersForUser(userId)
+    }
+
+    suspend fun getUnsyncedOrders(): List<LocalOrder> {
         return orderDao.getUnsyncedOrders()
     }
 

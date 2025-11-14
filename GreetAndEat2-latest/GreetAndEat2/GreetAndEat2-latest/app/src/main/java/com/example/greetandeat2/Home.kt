@@ -48,7 +48,7 @@ class Home : BaseActivity() {
         }
 
         findViewById<CardView>(R.id.cardRecentOrders).setOnClickListener {
-            startActivity(Intent(this, TrackingActivity::class.java))
+            startActivity(Intent(this, RecentOrdersActivity::class.java))
         }
 
         // Track order button inside active order card
