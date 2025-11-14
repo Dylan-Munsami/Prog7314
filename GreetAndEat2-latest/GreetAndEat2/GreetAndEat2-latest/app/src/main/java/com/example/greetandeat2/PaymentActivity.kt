@@ -4,18 +4,22 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.widget.Toolbar
 import com.example.greetandeat2.data.LocalOrder
 import com.example.greetandeat2.data.CartItem
 import com.example.greetandeat2.repository.OfflineRepository
 import com.example.greetandeat2.utils.NetworkUtils
+import com.example.greetandeat2.worker.SyncWorker
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import androidx.work.Constraints
+import androidx.work.NetworkType
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 
 class PaymentActivity : BaseActivity() {
 
@@ -29,7 +33,7 @@ class PaymentActivity : BaseActivity() {
 
         repository = OfflineRepository(com.example.greetandeat2.data.AppDatabase.getInstance(this))
 
-        val frame = findViewById<android.widget.FrameLayout>(R.id.content_frame)
+        val frame = findViewById<FrameLayout>(R.id.content_frame)
         LayoutInflater.from(this).inflate(R.layout.activity_payment, frame, true)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -44,6 +48,25 @@ class PaymentActivity : BaseActivity() {
         val btnPay = findViewById<Button>(R.id.btnPay)
         val backButton = findViewById<Button>(R.id.btnBack)
 
+        // 🔹 Payment method UI elements
+        val rbCash = findViewById<RadioButton>(R.id.rbCash)
+        val rbCard = findViewById<RadioButton>(R.id.rbCard)
+        val cardSection = findViewById<LinearLayout>(R.id.cardSection)
+
+        val etCardName = findViewById<EditText>(R.id.etCardName)
+        val etCardNumber = findViewById<EditText>(R.id.etCardNumber)
+        val etExpiry = findViewById<EditText>(R.id.etExpiry)
+        val etCVV = findViewById<EditText>(R.id.etCVV)
+
+        // 🔹 Toggle card form visibility
+        rbCash.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) cardSection.visibility = View.GONE
+        }
+
+        rbCard.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) cardSection.visibility = View.VISIBLE
+        }
+
         backButton.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
 
         val summary = if (cartItems.isNotEmpty()) {
@@ -54,6 +77,7 @@ class PaymentActivity : BaseActivity() {
         tvAmount.text = "Total: R$total"
 
         btnPay.setOnClickListener {
+
             if (cartItems.isEmpty()) {
                 Toast.makeText(this, "Cart is empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -64,7 +88,24 @@ class PaymentActivity : BaseActivity() {
                 return@setOnClickListener
             }
 
-            // ✅ Unlock rewards
+            val isCard = rbCard.isChecked
+
+            // 🔹 Validate card details if paying with card
+            if (isCard) {
+                if (etCardName.text.isBlank() ||
+                    etCardNumber.text.length < 8 ||
+                    etExpiry.text.isBlank() ||
+                    etCVV.text.length < 3
+                ) {
+                    Toast.makeText(this, "Please enter valid card details.", Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+            }
+
+            val paymentMethod = if (isCard) "Card Payment" else "Cash on Delivery"
+            Toast.makeText(this, "Processing $paymentMethod...", Toast.LENGTH_SHORT).show()
+
+            // 🔥 Unlock rewards
             if (!RewardsManager.isRewardUnlocked(this, "first_order")) {
                 RewardsManager.unlockReward(this, "first_order")
                 Toast.makeText(this, "🎉 You unlocked the 'First Order' reward!", Toast.LENGTH_LONG).show()
@@ -75,7 +116,7 @@ class PaymentActivity : BaseActivity() {
                 Toast.makeText(this, "💰 You unlocked the 'Big Spender' reward!", Toast.LENGTH_LONG).show()
             }
 
-            // Create local order
+            // 🔥 Create local order
             val orderId = "ORD${System.currentTimeMillis()}"
             val order = LocalOrder(
                 orderId = orderId,
@@ -89,18 +130,21 @@ class PaymentActivity : BaseActivity() {
                 repository.placeOrder(order)
                 repository.clearCart()
 
-                // Sync immediately if online
+                // 🔥 Sync if online
                 if (NetworkUtils.isOnline(this@PaymentActivity)) {
-                    val syncWorkRequest = androidx.work.OneTimeWorkRequestBuilder<com.example.greetandeat2.worker.SyncWorker>()
-                        .setConstraints(androidx.work.Constraints.Builder().setRequiredNetworkType(androidx.work.NetworkType.CONNECTED).build())
-                        .build()
-                    androidx.work.WorkManager.getInstance(this@PaymentActivity).enqueue(syncWorkRequest)
+                    val syncRequest = OneTimeWorkRequestBuilder<SyncWorker>()
+                        .setConstraints(
+                            Constraints.Builder()
+                                .setRequiredNetworkType(NetworkType.CONNECTED)
+                                .build()
+                        ).build()
+
+                    WorkManager.getInstance(this@PaymentActivity).enqueue(syncRequest)
                 }
             }
 
             Toast.makeText(this, "Payment successful! Order placed.", Toast.LENGTH_LONG).show()
 
-            // Navigate to TrackingActivity
             val intent = Intent(this, TrackingActivity::class.java)
             intent.putExtra("orderId", orderId)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
