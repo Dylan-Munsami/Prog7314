@@ -17,8 +17,10 @@ const userTokens = {}; // userId -> FCM token
 
 // Register FCM token
 app.post('/register-token', (req, res) => {
-    const { userId, fcmToken } = req.body;
-    if (!userId || !fcmToken) return res.status(400).json({ error: 'Missing fields' });
+    const { userId, fcmToken } = req.body || {}; // default to empty object
+    if (!userId || !fcmToken) {
+        return res.status(400).json({ error: 'Missing fields' });
+    }
 
     userTokens[userId] = fcmToken;
     console.log(`Registered FCM token for user ${userId}`);
@@ -27,8 +29,10 @@ app.post('/register-token', (req, res) => {
 
 // Place a new order
 app.post('/orders', (req, res) => {
-    const { userId, items, total } = req.body;
-    if (!userId || !items || !total) return res.status(400).json({ error: 'Missing fields' });
+    const { userId, items, total } = req.body || {}; // default to empty object
+    if (!userId || !items || !total) {
+        return res.status(400).json({ error: 'Missing fields' });
+    }
 
     const order = { id: nextOrderId.toString(), userId, items, total, status: 'PENDING' };
     orders.push(order);
@@ -37,18 +41,12 @@ app.post('/orders', (req, res) => {
     res.status(201).json(order);
 });
 
-// Get all orders for a user
-app.get('/orders/:userId', (req, res) => {
-    const userOrders = orders.filter(o => o.userId === req.params.userId);
-    res.json(userOrders);
-});
-
 // Update order status
 app.patch('/orders/:orderId', async (req, res) => {
     const order = orders.find(o => o.id === req.params.orderId);
     if (!order) return res.status(404).json({ error: 'Order not found' });
 
-    const { status } = req.body;
+    const { status } = req.body || {}; // default to empty object
     order.status = status || order.status;
 
     // Send FCM notification if token exists
@@ -77,4 +75,7 @@ app.patch('/orders/:orderId', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`API running on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`API running on port ${PORT}`);
+});
+
