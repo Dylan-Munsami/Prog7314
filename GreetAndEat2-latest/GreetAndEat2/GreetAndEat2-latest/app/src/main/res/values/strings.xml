@@ -41,7 +41,6 @@
     <string name="payment_methods">Payment Methods</string>
 
 
-
     <string name="total">Total: R%s</string>
 
     <string name="cart_empty">Cart is empty!</string>
@@ -51,7 +50,6 @@
     <string name="first_order_unlocked">🎉 You unlocked the \'First Order\' reward!</string>
     <string name="big_spender_unlocked">💰 You unlocked the \'Big Spender\' reward!</string>
     <string name="loyal_customer_unlocked">🏅 You unlocked the \'Loyal Customer\' reward!</string>
-
 
 
     <!-- Tracking -->

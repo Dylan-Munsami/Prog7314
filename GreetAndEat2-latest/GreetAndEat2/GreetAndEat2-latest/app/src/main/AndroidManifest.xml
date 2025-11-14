@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreetAndEat2">
         <activity
+            android:name=".PaymentMethodsActivity"
+            android:exported="false" />
+        <activity
             android:name=".PaymentActivity"
             android:exported="false" />
         <activity
@@ -20,9 +23,8 @@
         <activity
             android:name=".GameView"
             android:exported="false" />
-
-
-        <activity android:name=".FoodDashGameActivity"
+        <activity
+            android:name=".FoodDashGameActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MenuActivity"

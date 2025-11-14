@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:padding="16dp">
+
+    <!-- Scrollable list of cards -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addCardButton">
+
+        <LinearLayout
+            android:id="@+id/cardListLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="80dp"/>
+    </ScrollView>
+
+    <!-- Add Card Button at bottom -->
+    <Button
+        android:id="@+id/addCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Card"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:textSize="16sp"/>
+</RelativeLayout>
