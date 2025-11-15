@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Add these permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreetAndEat2">
+
+        <!-- Activities -->
         <activity
             android:name=".RecentOrdersActivity"
             android:exported="false" />
@@ -23,12 +31,11 @@
         <activity
             android:name=".CartActivity"
             android:exported="false" />
-        <activity
-            android:name=".GameView"
-            android:exported="false" />
+        <!-- Remove GameView as activity - it's a View, not Activity -->
         <activity
             android:name=".FoodDashGameActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="false" />
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
@@ -42,17 +49,19 @@
             android:name=".RewardsActivity"
             android:exported="false" />
         <activity
+            android:name=".NotificationTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" /> <!-- Splash is now the launcher -->
+            android:exported="false" />
         <activity
             android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,6 +71,31 @@
         <activity
             android:name=".Register"
             android:exported="false" />
-    </application>
+        <activity
+            android:name=".NotificationTestActivity"
+            android:exported="false" />
 
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+    </application>
 </manifest>

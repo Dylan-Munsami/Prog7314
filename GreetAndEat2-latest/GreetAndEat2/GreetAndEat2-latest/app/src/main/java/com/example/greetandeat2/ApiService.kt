@@ -18,7 +18,7 @@ interface ApiService {
     @GET("order/{orderId}")
     suspend fun getOrder(@Path("orderId") orderId: String): Response<Order>
 
-    // ✅ Make sure this endpoint exists
+
     @POST("orders/{orderId}/next")
     suspend fun progressOrder(@Path("orderId") orderId: String): Response<Order>
     @POST("register-token")

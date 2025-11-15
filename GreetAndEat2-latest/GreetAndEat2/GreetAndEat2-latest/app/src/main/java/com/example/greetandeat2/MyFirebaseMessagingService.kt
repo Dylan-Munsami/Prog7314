@@ -12,9 +12,12 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.random.Random
-import com.google.firebase.auth.FirebaseAuth
+
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onNewToken(token: String) {
@@ -22,12 +25,16 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // Send token to your server if needed
         sendRegistrationToServer(token)
     }
+
     private fun getCurrentUserId(): String? {
         return FirebaseAuth.getInstance().currentUser?.uid
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
+
+        // Log the incoming message for debugging
+        android.util.Log.d("FCM_DEBUG", "Message received: ${remoteMessage.data}")
 
         // Handle different types of notifications
         when {
@@ -53,6 +60,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val orderId = data["orderId"]
         val status = data["status"]
 
+        android.util.Log.d("FCM_DEBUG", "Handling data message - Type: $type, Title: $title")
+
         when (type) {
             "order_status" -> {
                 // Update local database with new order status
@@ -74,11 +83,16 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     private fun updateOrderStatus(orderId: String?, status: String?) {
         if (orderId != null && status != null) {
             // Update order status in local database
-            kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
-                val repository = com.example.greetandeat2.repository.OfflineRepository(
-                    com.example.greetandeat2.data.AppDatabase.getInstance(this@MyFirebaseMessagingService)
-                )
-                repository.updateOrderStatus(orderId, status)
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val repository = com.example.greetandeat2.repository.OfflineRepository(
+                        com.example.greetandeat2.data.AppDatabase.getInstance(this@MyFirebaseMessagingService)
+                    )
+                    repository.updateOrderStatus(orderId, status)
+                    android.util.Log.d("FCM_DEBUG", "Order status updated: $orderId -> $status")
+                } catch (e: Exception) {
+                    android.util.Log.e("FCM_DEBUG", "Failed to update order status", e)
+                }
             }
         }
     }
@@ -118,7 +132,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
 
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.ic_notofication)
+            .setSmallIcon(getNotificationIcon()) // Use safe icon method
             .setContentTitle(title)
             .setContentText(message)
             .setAutoCancel(true)
@@ -131,22 +145,24 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 val bitmap = BitmapFactory.decodeResource(resources, R.drawable.delivery_4)
                 notificationBuilder.setLargeIcon(bitmap)
             } catch (e: Exception) {
-                e.printStackTrace()
+                android.util.Log.e("FCM_DEBUG", "Failed to set large icon", e)
             }
         }
 
         // Add actions based on notification type
         when (data["type"]) {
             "order_status" -> {
+                val trackIcon = if (hasDrawable(R.drawable.ic_money)) R.drawable.ic_money else android.R.drawable.ic_menu_mylocation
                 notificationBuilder.addAction(
-                    R.drawable.ic_money,
+                    trackIcon,
                     "Track Order",
                     pendingIntent
                 )
             }
             "promotion" -> {
+                val dealsIcon = if (hasDrawable(R.drawable.ic_order)) R.drawable.ic_order else android.R.drawable.ic_menu_view
                 notificationBuilder.addAction(
-                    R.drawable.ic_order,
+                    dealsIcon,
                     "View Deals",
                     pendingIntent
                 )
@@ -156,8 +172,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // Create notification channel for Android O and above
         createNotificationChannel(channelId, data["priority"] ?: "default")
 
-        with(NotificationManagerCompat.from(this)) {
-            notify(notificationId, notificationBuilder.build())
+        try {
+            with(NotificationManagerCompat.from(this)) {
+                notify(notificationId, notificationBuilder.build())
+                android.util.Log.d("FCM_DEBUG", "Notification displayed: $title")
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("FCM_DEBUG", "Failed to show notification", e)
         }
     }
 
@@ -176,7 +197,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         )
 
         val notificationBuilder = NotificationCompat.Builder(this, "greet_and_eat_promotions")
-            .setSmallIcon(R.drawable.ic_notofication)
+            .setSmallIcon(getNotificationIcon())
             .setContentTitle(title)
             .setContentText(message)
             .setStyle(NotificationCompat.BigTextStyle().bigText(message))
@@ -186,8 +207,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         createNotificationChannel("greet_and_eat_promotions", "Promotions")
 
-        with(NotificationManagerCompat.from(this)) {
-            notify(notificationId, notificationBuilder.build())
+        try {
+            with(NotificationManagerCompat.from(this)) {
+                notify(notificationId, notificationBuilder.build())
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("FCM_DEBUG", "Failed to show promotion notification", e)
         }
     }
 
@@ -206,7 +231,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         )
 
         val notificationBuilder = NotificationCompat.Builder(this, "greet_and_eat_high_priority")
-            .setSmallIcon(R.drawable.ic_order)
+            .setSmallIcon(getNotificationIcon())
             .setContentTitle("🚚 $title")
             .setContentText(message)
             .setAutoCancel(true)
@@ -216,8 +241,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         createNotificationChannel("greet_and_eat_high_priority", "High Priority")
 
-        with(NotificationManagerCompat.from(this)) {
-            notify(notificationId, notificationBuilder.build())
+        try {
+            with(NotificationManagerCompat.from(this)) {
+                notify(notificationId, notificationBuilder.build())
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("FCM_DEBUG", "Failed to show delivery notification", e)
         }
     }
 
@@ -242,6 +271,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                     "greet_and_eat_promotions" -> "Special offers and promotions"
                     else -> "General notifications"
                 }
+                // Enable lights, vibration, etc.
+                enableLights(true)
+                enableVibration(true)
             }
 
             val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -250,24 +282,42 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun sendRegistrationToServer(token: String) {
-        val userId = getCurrentUserId() ?: return // stop if no user
+        val userId = getCurrentUserId()
 
-        kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
+        // If you don't have a server endpoint, just log the token
+        android.util.Log.d("FCM_DEBUG", "FCM Token: $token")
+        android.util.Log.d("FCM_DEBUG", "User ID: $userId")
+
+        // If you want to send to your server, implement this:
+        /*
+        CoroutineScope(Dispatchers.IO).launch {
             try {
-                val body = mapOf(
-                    "userId" to userId,  // non-null now
-                    "fcmToken" to token
-                )
-                val response = ApiClient.service.registerToken(body)
-                if (response.isSuccessful) {
-                    println("FCM token registered successfully")
-                } else {
-                    println("Failed to register FCM token: ${response.code()}")
-                }
+                // Your API call here
+                // Example: ApiClient.service.registerFCMToken(userId, token)
+                android.util.Log.d("FCM_DEBUG", "Token sent to server successfully")
             } catch (e: Exception) {
-                e.printStackTrace()
+                android.util.Log.e("FCM_DEBUG", "Failed to send token to server", e)
             }
+        }
+        */
+    }
+
+    // Helper function to check if a drawable exists
+    private fun hasDrawable(resId: Int): Boolean {
+        return try {
+            resources.getDrawable(resId, null)
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 
+    // Safe method to get notification icon
+    private fun getNotificationIcon(): Int {
+        return if (hasDrawable(R.drawable.ic_notification)) {
+            R.drawable.ic_notification
+        } else {
+            android.R.drawable.ic_dialog_info
+        }
+    }
 }

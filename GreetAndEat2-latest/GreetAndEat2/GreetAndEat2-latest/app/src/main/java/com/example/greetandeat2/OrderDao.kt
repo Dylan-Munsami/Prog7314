@@ -23,7 +23,7 @@ interface OrderDao {
     @Query("SELECT * FROM orders WHERE orderId = :orderId")
     suspend fun getOrderById(orderId: String): LocalOrder?
 
-    // ✅ New function: get orders for a specific user
+
     @Query("SELECT * FROM orders WHERE userId = :userId ORDER BY createdAt DESC")
     suspend fun getOrdersForUser(userId: String): List<LocalOrder>
 }

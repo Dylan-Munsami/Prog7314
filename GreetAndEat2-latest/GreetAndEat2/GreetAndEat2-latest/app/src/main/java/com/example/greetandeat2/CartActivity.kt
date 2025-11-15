@@ -110,6 +110,7 @@ class CartActivity : BaseActivity() {
         }
     }
 
+    @SuppressLint("StringFormatMatches")
     private fun updateTotal() {
         val total = cartItems.sumOf { it.price * it.quantity }
         tvTotal.text = getString(R.string.total, total)

@@ -139,13 +139,13 @@ class Login : AppCompatActivity() {
                     val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
                     prefs.edit().putString("lastUserEmail", user?.email).apply()
 
-                    // ✅ Unlock First Login if not yet unlocked
+
                     if (!RewardsManager.isRewardUnlocked(this, "first_login")) {
                         RewardsManager.unlockReward(this, "first_login")
                         Toast.makeText(this, "🎉 You unlocked the 'First Login' reward!", Toast.LENGTH_LONG).show()
                     }
 
-                    // ✅ Track daily streak
+
                     RewardsManager.handleDailyCheckIn(this)
 
                     startActivity(Intent(this, Home::class.java))

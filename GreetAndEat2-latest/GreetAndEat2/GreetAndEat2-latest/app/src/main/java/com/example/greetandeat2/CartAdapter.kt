@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.greetandeat2.data.CartItem // ✅ Import CartItem
 
 class CartAdapter(
-    private var cartItems: List<CartItem>, // ✅ Use CartItem instead of MenuItem
-    private val onItemRemoved: (CartItem) -> Unit // ✅ Use CartItem
+    private var cartItems: List<CartItem>,
+    private val onItemRemoved: (CartItem) -> Unit
 ) : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

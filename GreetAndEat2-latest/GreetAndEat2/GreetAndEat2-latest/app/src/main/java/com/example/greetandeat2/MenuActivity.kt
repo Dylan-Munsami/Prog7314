@@ -48,7 +48,7 @@ class MenuActivity : BaseActivity() {
 
         recyclerView.adapter = adapter
 
-        // ✅ ADD BUTTON CLICK LISTENERS
+
         setupButtonListeners()
     }
 
