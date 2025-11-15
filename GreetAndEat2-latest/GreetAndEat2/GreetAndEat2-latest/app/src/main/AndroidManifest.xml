@@ -69,9 +69,7 @@
         <activity
             android:name=".Register"
             android:exported="false" />
-        <activity
-            android:name=".NotificationTestActivity"
-            android:exported="false" />
+
 
         <!-- Firebase Messaging Service -->
         <service
