@@ -101,10 +101,7 @@ class Home : BaseActivity() {
             startActivity(Intent(this, FoodDashGameActivity::class.java))
         }
 
-        // Test notifications button (if exists in your layout)
-        findViewById<CardView>(R.id.cardMiniGame)?.setOnClickListener {
-            startActivity(Intent(this, NotificationTestActivity::class.java))
-        }
+
 
         // Handle active order card if it exists
         findViewById<CardView>(R.id.activeOrderCard)?.setOnClickListener {
