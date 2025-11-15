@@ -11,4 +11,11 @@
     <color name="bronze">#CD7F32</color>
     <color name="gold">#FFD700</color>
     <color name="purple_200">#E1BEE7</color>
+
+    <color name="primarysColor">#3F51B5</color>
+    <color name="secondarysColor">#FF4081</color>
+    <color name="green">#4CAF50</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="dark_grey">#616161</color>
+    <color name="whites">#FFFFFF</color>
 </resources>

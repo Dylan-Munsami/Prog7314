@@ -10,7 +10,9 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.google.android.material.button.MaterialButton
 import com.example.greetandeat2.repository.OfflineRepository
+import com.google.android.material.card.MaterialCardView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -31,11 +33,12 @@ class Home : BaseActivity() {
         val frame = findViewById<FrameLayout>(R.id.content_frame)
         layoutInflater.inflate(R.layout.activity_home, frame, true)
 
+        // Setup toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = getString(R.string.home)
         setupDrawer(toolbar)
 
-        // Handle system bars for edge-to-edge
+        // Handle edge-to-edge padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -49,23 +52,23 @@ class Home : BaseActivity() {
         findViewById<CardView>(R.id.cardOrderFood).setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-
         findViewById<CardView>(R.id.cardTrackOrder).setOnClickListener {
             startActivity(Intent(this, TrackingActivity::class.java))
         }
-
         findViewById<CardView>(R.id.cardRewards).setOnClickListener {
             startActivity(Intent(this, RewardsActivity::class.java))
         }
-
+        findViewById<CardView>(R.id.cardRecentOrders).setOnClickListener {
+            startActivity(Intent(this, RecentOrdersActivity::class.java))
+        }
         findViewById<CardView>(R.id.cardRecentOrders).setOnClickListener {
             startActivity(Intent(this, RecentOrdersActivity::class.java))
         }
 
-        // Track order button inside active order card
-        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnTrackOrder).setOnClickListener {
-            startActivity(Intent(this, TrackingActivity::class.java))
+        findViewById<MaterialCardView>(R.id.cardFoodDash).setOnClickListener {
+            startActivity(Intent(this, FoodDashGameActivity::class.java))
         }
+
 
         // --- User Authentication Check ---
         val currentUser = auth.currentUser
@@ -75,29 +78,38 @@ class Home : BaseActivity() {
             return
         }
 
-        // --- Find TextViews for dashboard cards ---
-        tvTotalOrders = findViewById(R.id.tvOrdersToday) // previously "Orders Today" text
+        // --- Dashboard TextViews ---
+        tvTotalOrders = findViewById(R.id.tvOrdersToday)
         tvRewardPoints = findViewById(R.id.tvRewardPoints)
 
-        // --- Update dashboard cards ---
+        // --- Update UI ---
         updateTotalOrders(currentUser.uid)
         updateRewardPoints()
     }
 
-    // --- Count total orders for logged-in user ---
     private fun updateTotalOrders(userId: String) {
         CoroutineScope(Dispatchers.Main).launch {
-            val allOrders = repository.getOrders() // get all orders
+            val allOrders = repository.getOrders()
             val userOrders = allOrders.filter { it.userId == userId }
+
             tvTotalOrders.text = userOrders.size.toString()
+
+            // Show or hide active order card
+            val activeOrderCard = findViewById<CardView>(R.id.activeOrderCard)
+            val tvOrderStatus = findViewById<TextView>(R.id.tvOrderStatus)
+            val activeOrder = userOrders.lastOrNull() // latest order
+            if (activeOrder != null) {
+                activeOrderCard.visibility = CardView.VISIBLE
+                tvOrderStatus.text = activeOrder.status.capitalize()
+            } else {
+                activeOrderCard.visibility = CardView.GONE
+            }
         }
     }
 
-    // --- Calculate reward points dynamically ---
     private fun updateRewardPoints() {
         val user = auth.currentUser
-
-        if (user != null) {
+        tvRewardPoints.text = if (user != null) {
             val rewardsList = listOf(
                 "first_login",
                 "first_order",
@@ -120,11 +132,7 @@ class Home : BaseActivity() {
                     level = if (RewardsManager.isRewardUnlocked(this, key)) RewardLevel.GOLD else RewardLevel.SILVER
                 )
             }
-
-            val totalPoints = rewardsList.filter { it.level == RewardLevel.GOLD }.sumOf { it.points }
-            tvRewardPoints.text = totalPoints.toString()
-        } else {
-            tvRewardPoints.text = "0"
-        }
+            rewardsList.filter { it.level == RewardLevel.GOLD }.sumOf { it.points }.toString()
+        } else "0"
     }
 }
