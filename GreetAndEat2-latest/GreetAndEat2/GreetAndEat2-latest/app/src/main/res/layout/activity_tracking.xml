@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Header with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/order_tracking"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_order"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+
+        <!-- Order Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Order Header -->
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_id"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Status with Progress Bar -->
+                <TextView
+                    android:id="@+id/tvTrackingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preparing_your_order"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondaryColor"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:progress="25"
+                    android:progressTint="@color/green" />
+
+                <!-- Progress Labels -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/ordered"
+                        android:textSize="12sp"
+                        android:textColor="@color/green"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/preparing"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/ready"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/delivered"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- Estimated Time -->
+                <TextView
+                    android:id="@+id/tvEstimatedTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estimated_delivery_time"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Status Timeline Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_timeline"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvStatusHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_placed_just_now"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- No Order Message (Initially Hidden) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNoOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="40dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_notofication"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/grey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_active_orders"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_orders_message"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_status"
+            android:textAllCaps="false"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
+            android:elevation="4dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btnGoHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_home"
+            android:textAllCaps="false"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/secondaryColor"
+            android:textColor="@android:color/white"
+            android:elevation="4dp"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>
