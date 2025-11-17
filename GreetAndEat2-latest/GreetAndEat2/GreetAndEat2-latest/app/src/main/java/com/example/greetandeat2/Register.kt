@@ -66,3 +66,9 @@ class Register : AppCompatActivity() {
             }
     }
 }
+
+
+// References:
+// Firebase Authentication for new user registration: https://firebase.google.com/docs/auth/android/email-link
+// Android form input validation: https://developer.android.com/reference/android/widget/EditText
+// Kotlin coroutines for asynchronous operations: https://kotlinlang.org/docs/coroutines-overview.html
