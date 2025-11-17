@@ -53,6 +53,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
+
     private fun handleDataMessage(data: Map<String, String>) {
         val type = data["type"]
         val title = data["title"] ?: getString(R.string.app_name)
@@ -249,6 +250,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             android.util.Log.e("FCM_DEBUG", "Failed to show delivery notification", e)
         }
     }
+
+
 
     private fun createNotificationChannel(channelId: String, importance: String) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
