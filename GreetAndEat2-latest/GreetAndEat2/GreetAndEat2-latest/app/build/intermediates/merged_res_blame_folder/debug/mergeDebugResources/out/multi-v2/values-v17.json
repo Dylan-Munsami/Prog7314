@@ -4,7 +4,7 @@
             "outputFile": "com.example.greetandeat2.app-mergeDebugResources-51:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dylan\\.gradle\\caches\\8.13\\transforms\\5b479b555d7b2f4892a3d7670a9316cc\\transformed\\appcompat-1.7.1\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\kamil\\.gradle\\caches\\8.13\\transforms\\5b479b555d7b2f4892a3d7670a9316cc\\transformed\\appcompat-1.7.1\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryDarkColor"
     tools:context=".Home">
 
-    <!-- Background Image -->
+    <!-- Background Image with dark gradient overlay -->
     <ImageView
         android:id="@+id/bgImage"
         android:layout_width="match_parent"
@@ -16,24 +19,24 @@
         android:scaleType="centerCrop"
         android:alpha="0.25" />
 
-    <!-- Dark overlay to improve readability -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000" />
+        android:background="@android:color/black"
+        android:alpha="0.4" />
 
-    <!-- Main Content -->
+    <!-- Scrollable main content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:clipToPadding="false">
 
         <LinearLayout
-            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center_horizontal">
 
             <!-- Welcome Message -->
             <TextView
@@ -44,7 +47,7 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="8dp"
-                android:gravity="center" />
+                android:gravity="center"/>
 
             <!-- Subtitle -->
             <TextView
@@ -55,16 +58,16 @@
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="32dp"
                 android:gravity="center"
-                android:alpha="0.8" />
+                android:alpha="0.8"/>
 
             <!-- Quick Stats Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
-                app:cardBackgroundColor="#1AFFFFFF">
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/primaryColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -73,7 +76,7 @@
                     android:padding="20dp"
                     android:weightSum="3">
 
-                    <!-- Orders Today -->
+                    <!-- Total Orders -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -82,9 +85,10 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/tvOrdersToday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2"
+                            android:text="0"
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
@@ -92,14 +96,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/orders_today"
+                            android:text="Total Orders"
                             android:textSize="12sp"
                             android:textColor="@android:color/white"
-                            android:alpha="0.7" />
+                            android:alpha="0.8"/>
                     </LinearLayout>
 
-                    <!-- Points -->
-                    <!-- Points -->
+                    <!-- Reward Points -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -107,7 +110,6 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <!-- Dynamic Points -->
                         <TextView
                             android:id="@+id/tvRewardPoints"
                             android:layout_width="wrap_content"
@@ -117,17 +119,14 @@
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
 
-                        <!-- Label -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/reward_points"
+                            android:text="@string/Order_points"
                             android:textSize="12sp"
                             android:textColor="@android:color/white"
-                            android:alpha="0.7" />
-
+                            android:alpha="0.8"/>
                     </LinearLayout>
-
 
                     <!-- Delivery Time -->
                     <LinearLayout
@@ -140,7 +139,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25min"
+                            android:text="25 min"
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
@@ -151,21 +150,21 @@
                             android:text="@string/avg_delivery"
                             android:textSize="12sp"
                             android:textColor="@android:color/white"
-                            android:alpha="0.7" />
+                            android:alpha="0.8"/>
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Active Order Card (if any) -->
+            <!-- Active Order Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/activeOrderCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
-                app:cardBackgroundColor="@color/primaryColor"
-                android:visibility="gone">
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/secondaryColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -180,7 +179,7 @@
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"
-                        android:layout_marginBottom="8dp" />
+                        android:layout_marginBottom="8dp"/>
 
                     <TextView
                         android:id="@+id/tvOrderStatus"
@@ -190,7 +189,7 @@
                         android:textSize="14sp"
                         android:textColor="@android:color/white"
                         android:alpha="0.9"
-                        android:layout_marginBottom="12dp" />
+                        android:layout_marginBottom="12dp"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnTrackOrder"
@@ -199,7 +198,7 @@
                         android:text="@string/track_order"
                         android:textColor="@color/primaryColor"
                         android:backgroundTint="@android:color/white"
-                        app:cornerRadius="20dp" />
+                        app:cornerRadius="20dp"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -211,19 +210,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"/>
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:rowCount="2"
                 android:alignmentMode="alignMargins"
                 android:columnOrderPreserved="false"
                 android:padding="8dp">
 
                 <!-- Order Food -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardOrderFood"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
@@ -231,18 +230,16 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:id="@+id/cardOrderFood">
+                    android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="@color/primaryColor"
-                        android:padding="16dp">
+                        android:background="@color/primaryColor">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -255,15 +252,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/order_food"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
                             android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
                             android:gravity="center" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Track Order -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTrackOrder"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
@@ -271,18 +269,16 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:id="@+id/cardTrackOrder">
+                    android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="@color/secondaryColor"
-                        android:padding="16dp">
+                        android:background="@color/secondaryColor">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -295,15 +291,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/track_order"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
                             android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
                             android:gravity="center" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Rewards -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRewards"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
@@ -311,18 +308,16 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:id="@+id/cardRewards">
+                    android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#FF6F3C"
-                        android:padding="16dp">
+                        android:background="#FF6F3C">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -335,15 +330,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rewards"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
                             android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
                             android:gravity="center" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Recent Orders -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRecentOrders"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
@@ -351,18 +347,16 @@
                     android:layout_rowWeight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:id="@+id/cardRecentOrders">
+                    android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#4CAF50"
-                        android:padding="16dp">
+                        android:background="#4CAF50">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -375,56 +369,53 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/recent_orders"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
                             android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
                             android:gravity="center" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
             </GridLayout>
 
-            <!-- Mini Game -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:foreground="?android:attr/selectableItemBackground"
+            <!-- Mini Game Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFoodDash"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/cardMiniGame">
+                android:foreground="?attr/selectableItemBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:background="#9C27B0"
+                    android:background="@drawable/gradient_background"
                     android:padding="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="🎮"
-                        android:textSize="24sp"
-                        android:layout_marginBottom="8dp" />
+                        android:textSize="28sp"
+                        android:layout_marginBottom="8dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/food_dash_game"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white"
-                        android:gravity="center" />
+                        android:textColor="@android:color/white"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <!-- Featured Restaurants -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -433,26 +424,61 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"/>
 
-            <!-- Horizontal Scroll for Featured Restaurants -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp">
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:spacing="12dp">
 
-                    <!-- Featured Restaurant Cards would go here -->
-                    <!-- You can add 3-4 restaurant preview cards -->
+                    <!-- Sample Featured Restaurant Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="200dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="6dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/kfc"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cafe Roma"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⭐ 4.7 | Italian"
+                                android:textSize="12sp"
+                                android:textColor="#666"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
             </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>
-
 </FrameLayout>

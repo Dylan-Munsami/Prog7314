@@ -11,6 +11,7 @@
     <string name="avg_delivery">Isilinganiso Sokulethwa</string>
     <string name="avoid_traffic">Gwema ithrafikhi nezingqinamba!</string>
     <string name="back">Emuva</string>
+    <string name="back_to_home">🏠 Emuva Ekhaya</string>
     <string name="big_spender_desc">Sebenzisa ngaphezu kuka-R500 kwi-oda elilodwa</string>
     <string name="big_spender_title">Umthengi Omkhulu</string>
     <string name="big_spender_unlocked">💰 Uvule imivuzo \'Yomthengi Omkhulu\'!</string>
@@ -29,6 +30,7 @@
     <string name="edit">Hlela</string>
     <string name="edit_profile">Hlela Iprofayile</string>
     <string name="estimated_delivery">Isikhathi esilinganiselwe sokulethwa: imiz %1$s</string>
+    <string name="estimated_delivery_time">🕐 Isikhathi esilinganiselwe sokulethwa: imizuzu eyi-15-20</string>
     <string name="featured_restaurants">Izindawo Zokudlela Ezikhonjiwe</string>
     <string name="first_login_bonus">Ibhonasi yokuqala yokungena inikeziwe!</string>
     <string name="first_login_desc">Qedela ukungena kokuqala</string>
@@ -55,13 +57,19 @@
     <string name="menu_item">Into Yemenyu</string>
     <string name="msg_rewards_login_required">Sicela ungene ukuze ubone imivuzo yakho.</string>
     <string name="next">Okulandelayo</string>
+    <string name="no_active_orders">Awekho Ama-oda asebenzayo</string>
+    <string name="no_orders_message">Awanawo ama-oda asebenzayo okulandelela. Beka i-oda ukuze ubone imininingwane yokulandelela lapha.</string>
     <string name="notifications">Izaziso</string>
     <string name="open">Vula</string>
     <string name="order_food">Oda Ukudla</string>
     <string name="order_id">I-oda #%1$s</string>
+    <string name="order_placed_just_now">• I-oda lifakiwe - Okwamanje</string>
     <string name="order_progress">Inqubekela Phambili Ye-oda</string>
     <string name="order_received">I-ODA_ITHOLWE</string>
     <string name="order_summary_placeholder">Isifinyezo se-oda sizovela lapha...</string>
+    <string name="order_timeline">Uhla Lwezikhathi Ze-oda</string>
+    <string name="order_tracking">Ukulandelela kwe-oda</string>
+    <string name="ordered">I-oda</string>
     <string name="orders_today">Ama-oda Namuhla</string>
     <string name="out_for_delivery">IPHUMA_YOKULETHWA</string>
     <string name="payment_methods">Iindlela zokuhlawula</string>
@@ -72,8 +80,10 @@
     <string name="points_label">Amaphuzu Akho: %d</string>
     <string name="preferences">Iintyiselo</string>
     <string name="preparing">ILUNGISELELA</string>
+    <string name="preparing_your_order">Ilungiselela i-oda lakho</string>
     <string name="quantity">Inani: %1$s</string>
     <string name="quick_actions">Izenzo Ezesheshayo</string>
+    <string name="ready">Ilungele</string>
     <string name="ready_for_pickup">ILUNGELE_UKUTHATHWA</string>
     <string name="recent_orders">Ama-oda Akamuva</string>
     <string name="refresh">Vuselela</string>
@@ -94,6 +104,7 @@
     <string name="total">Isamba: R%s</string>
     <string name="track_order">Landelela I-oda</string>
     <string name="tracking">Ukulandelela</string>
+    <string name="update_status">🔄 Buyekeza Isimo</string>
     <string name="welcome_back">Wamukelekile!</string>
     <string name="what_would_you_like">Yini ofuna ukuyenza namuhla?</string>
     <string name="your_cart">Ibhakede Lakho</string>

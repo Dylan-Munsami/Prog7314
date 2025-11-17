@@ -8,12 +8,13 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="36" />
 
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <!-- Add these permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
     <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
@@ -42,17 +43,24 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.GreetAndEat2" >
+
+        <!-- Activities -->
+        <activity
+            android:name="com.example.greetandeat2.RecentOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.greetandeat2.PaymentMethodsActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.greetandeat2.PaymentActivity"
             android:exported="false" />
         <activity
             android:name="com.example.greetandeat2.CartActivity"
             android:exported="false" />
-        <activity
-            android:name="com.example.greetandeat2.GameView"
-            android:exported="false" />
+        <!-- Remove GameView as activity - it's a View, not Activity -->
         <activity
             android:name="com.example.greetandeat2.FoodDashGameActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.greetandeat2.MenuActivity"
@@ -71,7 +79,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.greetandeat2.MainActivity"
-            android:exported="false" /> <!-- Splash is now the launcher -->
+            android:exported="false" />
         <activity
             android:name="com.example.greetandeat2.Splash"
             android:exported="true" >
@@ -87,6 +95,16 @@
         <activity
             android:name="com.example.greetandeat2.Register"
             android:exported="false" />
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name="com.example.greetandeat2.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

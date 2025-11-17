@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Greet And Eat 2</string>
+
+    <!-- Auth / Profile -->
+    <string name="login">Ngena</string>
+    <string name="logout">Phuma</string>
+    <string name="edit_profile">Hlela Iprofayile</string>
+    <string name="change_password">Tshintsha Iphasiwedi</string>
+
+    <!-- Settings -->
+    <string name="language">Ulwimi</string>
+    <string name="settings">Iisetingi</string>
+    <string name="preferences">Iintyiselo</string>
+    <string name="theme">Itayitile</string>
+    <string name="dark_mode">Imowudi emnyama</string>
+    <string name="notifications">Izaziso</string>
+    <string name="account_and_security">Iakhawunti noKhuseleko</string>
+    <string name="payments">Iintlawulo</string>
+    <string name="payment_methods">Iindlela zokuhlawula</string>
+
+    <!-- Tracking Activity -->
+    <string name="order_tracking">Ukulandelela kwe-oda</string>
+    <string name="preparing_your_order">Ilungiselela i-oda lakho</string>
+    <string name="ordered">I-oda</string>
+
+    <string name="ready">Ilungele</string>
+
+    <string name="estimated_delivery_time">🕐 Isikhathi esilinganiselwe sokulethwa: imizuzu eyi-15-20</string>
+    <string name="order_timeline">Uhla Lwezikhathi Ze-oda</string>
+    <string name="order_placed_just_now">• I-oda lifakiwe - Okwamanje</string>
+    <string name="no_active_orders">Awekho Ama-oda asebenzayo</string>
+    <string name="no_orders_message">Awanawo ama-oda asebenzayo okulandelela. Beka i-oda ukuze ubone imininingwane yokulandelela lapha.</string>
+    <string name="update_status">🔄 Buyekeza Isimo</string>
+    <string name="back_to_home">🏠 Emuva Ekhaya</string>
+    <!-- Cart & Payment -->
+    <string name="your_cart">Ibhakede Lakho</string>
+    <string name="total">Isamba: R%s</string>
+    <string name="back">Emuva</string>
+    <string name="next">Okulandelayo</string>
+    <string name="cart_empty">Ibhakede alinalutho!</string>
+    <string name="login_required_payment">Sicela ungene ukuze uqhubeke</string>
+    <string name="item_removed">%s isusiwe</string>
+    <string name="payment_successful">Inkokhelo iphumelele! Ngiyabonga, %s</string>
+    <string name="first_order_unlocked">🎉 Uvule imivuzo \'Ye-oda Lokuqala\'!</string>
+    <string name="big_spender_unlocked">💰 Uvule imivuzo \'Yomthengi Omkhulu\'!</string>
+    <string name="loyal_customer_unlocked">🏅 Uvule imivuzo \'Yekhasimende Eliyintshatsheli\'!</string>
+
+    <!-- Restaurants -->
+
+
+    <!-- Tracking -->
+    <string name="tracking">Ukulandelela</string>
+
+    <string name="order_summary_placeholder">Isifinyezo se-oda sizovela lapha...</string>
+    <string name="status_updated">Isimo sisusethwe: %s</string>
+    <string name="refresh">Vuselela</string>
+
+
+    <!-- Order Statuses -->
+    <string name="order_received">I-ODA_ITHOLWE</string>
+    <string name="preparing">ILUNGISELELA</string>
+    <string name="ready_for_pickup">ILUNGELE_UKUTHATHWA</string>
+    <string name="out_for_delivery">IPHUMA_YOKULETHWA</string>
+    <string name="delivered">ILETHWE</string>
+    <!-- General buttons -->
+    <string name="edit">Hlela</string>
+    <string name="change">Tshintsha</string>
+    <string name="manage">Lawula</string>
+
+    <string name="checkout">Hlola</string>
+    <string name="add">Engeza</string>
+    <string name="remove">Susa</string>
+    <string name="go_home">🏠 Buyela Ekhaya</string>
+
+
+    <string name="food_dash_game">Ukuletha Ukudla Ngokushesha</string>
+    <string name="tap_to_start">Thepha ukuqala ukuletha!</string>
+    <string name="game_over">Ukulethwa Kwehlulekile!</string>
+    <string name="score">Ukulethwa: %d</string>
+    <string name="high_score">Okungcono: %d</string>
+    <string name="play_again">Yenza okunye ukulethwa</string>
+    <string name="delivery_completed">I-oda ilethwe! +%d amaphuzu</string>
+    <string name="avoid_traffic">Gwema ithrafikhi nezingqinamba!</string>
+    <string name="collect_tips">Qoqa amathiphu ngamaphuzu ebonasi!</string>
+
+
+    <string name="home">Ikhaya</string>
+    <string name="welcome_back">Wamukelekile!</string>
+    <string name="what_would_you_like">Yini ofuna ukuyenza namuhla?</string>
+    <string name="orders_today">Ama-oda Namuhla</string>
+    <string name="reward_points">Amaphuzu Wemivuzo</string>
+    <string name="avg_delivery">Isilinganiso Sokulethwa</string>
+    <string name="track_order">Landelela I-oda</string>
+    <string name="quick_actions">Izenzo Ezesheshayo</string>
+    <string name="order_food">Oda Ukudla</string>
+    <string name="rewards">Imivuzo</string>
+    <string name="recent_orders">Ama-oda Akamuva</string>
+    <string name="featured_restaurants">Izindawo Zokudlela Ezikhonjiwe</string>
+
+    <!-- Home / Menu -->
+    <string name="home_menu">Ikhaya Menu</string>
+    <string name="restaurants">Izindawo Zokudlela</string>
+    <string name="menu_item">Into Yemenyu</string>
+
+
+    <!-- Orders -->
+    <string name="order_id">I-oda #%1$s</string>
+    <string name="status">Isimo: %1$s</string>
+    <string name="estimated_delivery">Isikhathi esilinganiselwe sokulethwa: imiz %1$s</string>
+    <string name="order_progress">Inqubekela Phambili Ye-oda</string>
+    <string name="refresh_next_stage">Okulandelayo: %1$s</string>
+    <string name="quantity">Inani: %1$s</string>
+
+    <!-- Rewards -->
+    <string name="rewards_title">Imivuzo Yam</string>
+    <string name="points">Amaphuzu: %1$s</string>
+    <string name="subscribe_pro">Bhalisela Greet en Eat Pro</string>
+    <string name="subscribed_pro">Ubhalisele ku-Pro!</string>
+    <string name="login_required">Sicela ungene ukubona imivuzo</string>
+    <string name="points_label">Amaphuzu Akho: %d</string>
+
+    <!-- Navigation Drawer -->
+    <string name="open">Vula</string>
+    <string name="close">Vala</string>
+
+    <!-- Reward titles -->
+    <string name="first_login_title">Ukuqala Ngena</string>
+    <string name="first_order_title">I-oda Lokuqala</string>
+    <string name="loyal_customer_title">Ikhasimende Eliyintshatsheli</string>
+    <string name="big_spender_title">Umthengi Omkhulu</string>
+    <string name="daily_checkin_title">Ukuhlola Nsuku Zonke</string>
+
+    <!-- Reward descriptions -->
+    <string name="first_login_desc">Qedela ukungena kokuqala</string>
+    <string name="first_order_desc">Faka i-oda lakho lokuqala</string>
+    <string name="loyal_customer_desc">Yiba ngumthengi oyintshatsheli</string>
+    <string name="big_spender_desc">Sebenzisa ngaphezu kuka-R500 kwi-oda elilodwa</string>
+    <string name="daily_checkin_desc">Hlola izinsuku ezi-7</string>
+
+    <!-- Reward messages -->
+    <string name="first_login_bonus">Ibhonasi yokuqala yokungena inikeziwe!</string>
+    <string name="daily_checkin_msg">Ukuhlola kwansuku zonke kuqediwe!</string>
+
+    <!-- Toasts / messages -->
+    <string name="msg_rewards_login_required">Sicela ungene ukuze ubone imivuzo yakho.</string>
+
+    <!-- Languages -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>Afrikaans</item>
+        <item>isiZulu</item>
+    </string-array>
+</resources>

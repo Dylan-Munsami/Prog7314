@@ -7,21 +7,29 @@
     </string-array>
     <color name="backgroundColor">#1E1E1E</color>
     <color name="bronze">#CD7F32</color>
+    <color name="dark_grey">#616161</color>
     <color name="gold">#FFD700</color>
+    <color name="green">#4CAF50</color>
+    <color name="grey">#9E9E9E</color>
     <color name="primaryColor">#121212</color>
     <color name="primaryDarkColor">#000000</color>
+    <color name="primarysColor">#3F51B5</color>
+    <color name="purple_200">#E1BEE7</color>
     <color name="purple_500">#9C27B0</color>
     <color name="secondaryColor">#03DAC6</color>
+    <color name="secondarysColor">#FF4081</color>
     <color name="silver">#C0C0C0</color>
     <color name="textPrimary">#212121</color>
     <color name="textSecondary">#757575</color>
     <color name="white">#FFFFFF</color>
+    <color name="whites">#FFFFFF</color>
     <string name="account_and_security">Account and Security</string>
     <string name="add">Add</string>
     <string name="app_name">Greet And Eat 2</string>
     <string name="avg_delivery">Avg Delivery</string>
     <string name="avoid_traffic">Avoid traffic and obstacles!</string>
     <string name="back">Back</string>
+    <string name="back_to_home">Back to Home</string>
     <string name="big_spender_desc">Spend over R500 in one order</string>
     <string name="big_spender_title">Big Spender</string>
     <string name="big_spender_unlocked">💰 You unlocked the \'Big Spender\' reward!</string>
@@ -41,6 +49,7 @@
     <string name="edit">Edit</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="estimated_delivery">Estimated delivery: %1$s min</string>
+    <string name="estimated_delivery_time">Estimated delivery: 15-20 minutes</string>
     <string name="featured_restaurants">Featured Restaurants</string>
     <string name="first_login_bonus">First login bonus awarded!</string>
     <string name="first_login_desc">Complete your first login</string>
@@ -72,13 +81,19 @@
     <string name="menu_item">Menu Item</string>
     <string name="msg_rewards_login_required">Please log in to view your rewards.</string>
     <string name="next">Next</string>
+    <string name="no_active_orders">No Active Orders</string>
+    <string name="no_orders_message">You don\'t have any active orders to track. Place an order to see tracking information here.</string>
     <string name="notifications">Notifications</string>
     <string name="open">Open</string>
     <string name="order_food">Order Food</string>
     <string name="order_id">Order #%1$s</string>
+    <string name="order_placed_just_now">• Order placed - Just now</string>
     <string name="order_progress">Order Progress</string>
     <string name="order_received">ORDER_RECEIVED</string>
     <string name="order_summary_placeholder">Order Summary will appear here...</string>
+    <string name="order_timeline">Order Timeline</string>
+    <string name="order_tracking">Order Tracking</string>
+    <string name="ordered">Ordered</string>
     <string name="orders_today">Orders Today</string>
     <string name="out_for_delivery">OUT_FOR_DELIVERY</string>
     <string name="payment_methods">Payment Methods</string>
@@ -89,9 +104,11 @@
     <string name="points_label">Your Points: %d</string>
     <string name="preferences">Preferences</string>
     <string name="preparing">PREPARING</string>
+    <string name="preparing_your_order">Preparing your order</string>
     <string name="project_id" translatable="false">greet-and-eat</string>
     <string name="quantity">Qty: %1$s</string>
     <string name="quick_actions">Quick Actions</string>
+    <string name="ready">Ready</string>
     <string name="ready_for_pickup">READY_FOR_PICKUP</string>
     <string name="recent_orders">Recent Orders</string>
     <string name="refresh">Refresh</string>
@@ -112,6 +129,7 @@
     <string name="total">Total: R%s</string>
     <string name="track_order">Track Order</string>
     <string name="tracking">Tracking</string>
+    <string name="update_status">Update Status</string>
     <string name="welcome_back">Welcome Back!</string>
     <string name="what_would_you_like">What would you like to do today?</string>
     <string name="your_cart">Your Cart</string>

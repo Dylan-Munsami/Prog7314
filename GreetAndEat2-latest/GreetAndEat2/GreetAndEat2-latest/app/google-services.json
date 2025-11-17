@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "187103160430",
+    "project_id": "greet-and-eat",
+    "storage_bucket": "greet-and-eat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187103160430:android:c101d9fef1756120e9de7f",
+        "android_client_info": {
+          "package_name": "com.example.greetandeat2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187103160430-scav4q9uefh2os9opeaqknfsphnp1umf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.greetandeat2",
+            "certificate_hash": "1d0fd2984e77b83939b8acbd1153c2a3caa4b785"
+          }
+        },
+        {
+          "client_id": "187103160430-oc5i3k2gdeqej5fodpne796b6ulee401.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiZTD9Yj6XH6-Lm322VEYx6Sj-LeAOnqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187103160430-oc5i3k2gdeqej5fodpne796b6ulee401.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

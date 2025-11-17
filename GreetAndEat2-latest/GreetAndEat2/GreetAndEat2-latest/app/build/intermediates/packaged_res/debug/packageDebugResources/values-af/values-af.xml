@@ -11,6 +11,7 @@
     <string name="avg_delivery">Gem. Aflewering</string>
     <string name="avoid_traffic">Verkear en hindernisse vermy!</string>
     <string name="back">Terug</string>
+    <string name="back_to_home">🏠 Tuis Toe</string>
     <string name="big_spender_desc">Besteed meer as R500 in een bestelling</string>
     <string name="big_spender_title">Groot Besteeër</string>
     <string name="big_spender_unlocked">💰 Jy het die \'Groot Besteeër\' beloning ontsluit!</string>
@@ -29,6 +30,7 @@
     <string name="edit">Wysig</string>
     <string name="edit_profile">Wysig profiel</string>
     <string name="estimated_delivery">Geskatte aflewering: %1$s min</string>
+    <string name="estimated_delivery_time">🕐 Geskatte aflewering: 15-20 minute</string>
     <string name="featured_restaurants">Aanbevole Restaurante</string>
     <string name="first_login_bonus">Eerste aanmeldbonus toegeken!</string>
     <string name="first_login_desc">Voltooi jou eerste aanmelding</string>
@@ -55,13 +57,19 @@
     <string name="menu_item">Spyskaart Item</string>
     <string name="msg_rewards_login_required">Teken asseblief in om jou belonings te sien.</string>
     <string name="next">Volgende</string>
+    <string name="no_active_orders">Geen Aktiewe Bestellings</string>
+    <string name="no_orders_message">Jy het geen aktiewe bestellings om na te spoor nie. Plaas n bestelling om opvolg inligting hier te sien.</string>
     <string name="notifications">Kennisgewings</string>
     <string name="open">Open</string>
     <string name="order_food">Bestel Kos</string>
     <string name="order_id">Bestelling #%1$s</string>
+    <string name="order_placed_just_now">• Bestelling geplaas - Nou net</string>
     <string name="order_progress">Bestelling Vordering</string>
     <string name="order_received">BESTELLING_ONTVANG</string>
     <string name="order_summary_placeholder">Bestelling opsomming verskyn hier...</string>
+    <string name="order_timeline">Bestelling Tydlyn</string>
+    <string name="order_tracking">Bestelling Opvolg</string>
+    <string name="ordered">Bestel</string>
     <string name="orders_today">Bestellings Vandag</string>
     <string name="out_for_delivery">UIT_VIR_AFLEWERING</string>
     <string name="payment_methods">Betalingsmetodes</string>
@@ -72,8 +80,10 @@
     <string name="points_label">Jou Punte: %d</string>
     <string name="preferences">Voorkeure</string>
     <string name="preparing">BEREI_VOOR</string>
+    <string name="preparing_your_order">Berei jou bestelling voor</string>
     <string name="quantity">Aantal: %1$s</string>
     <string name="quick_actions">Vinnige Aksies</string>
+    <string name="ready">Gereed</string>
     <string name="ready_for_pickup">GEREED_VIR_AFHALING</string>
     <string name="recent_orders">Onlangse Bestellings</string>
     <string name="refresh">Verfris</string>
@@ -94,6 +104,7 @@
     <string name="total">Totaal: R%s</string>
     <string name="track_order">Volg Bestelling</string>
     <string name="tracking">Opvolg</string>
+    <string name="update_status">🔄 Opdateer Status</string>
     <string name="welcome_back">Welkom Terug!</string>
     <string name="what_would_you_like">Wat wil jy vandag doen?</string>
     <string name="your_cart">Jou Mandjie</string>

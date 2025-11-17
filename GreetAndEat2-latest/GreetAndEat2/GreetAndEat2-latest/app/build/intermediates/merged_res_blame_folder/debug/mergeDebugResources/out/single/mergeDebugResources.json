@@ -1,390 +1,418 @@
 [
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_tracking.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_tracking.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_home.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_original_chicken.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/original_chicken.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/xml_backup_rules.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_original_chicken.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\original_chicken.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_popcorn_chicken.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/popcorn_chicken.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_pepperoni_pizza.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\pepperoni_pizza.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_cart.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_cart.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_carbonara.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\carbonara.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_login.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_login.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_button_outline.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_button_outline.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_rewards.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_rewards.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_pizza_hut.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/pizza_hut.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_chicken_nuggets.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\chicken_nuggets.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/menu_menu_item.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/menu/menu_item.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_onion_rings.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/onion_rings.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_layout_toolbar.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\layout_toolbar.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_coke.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\coke.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_edittext.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_edittext.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_login.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_login.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_register.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_register.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_onion_rings.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\onion_rings.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_budget.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_budget.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_cofee.jpg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\cofee.jpg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ice_cream.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ice_cream.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_base_drawer.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_base_drawer.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_veggie_pizza.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/veggie_pizza.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_cheeseburger.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\cheeseburger.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_item_reward.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/item_reward.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_spinner_background.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\spinner_background.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_button.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_button.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_gradient_bg.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/gradient_bg.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_tracking.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_tracking.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_money.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_money.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_login.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_login.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_bg_rounded_image.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/bg_rounded_image.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_setting.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_image.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_image.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_zinger_burger.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\zinger_burger.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_order.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_order.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_bg_rounded_image.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\bg_rounded_image.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_circle_bg.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\circle_bg.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_carbonara.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/carbonara.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_payment_methods.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_payment_methods.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_dialog_add_card.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\dialog_add_card.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_loyal.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_loyal.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_payment.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_payment.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_tiramisu.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\tiramisu.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_fries.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/fries.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_gradient_bg.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\gradient_bg.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_loyal.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_loyal.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_item_cart.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/item_cart.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_green_curry.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\green_curry.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_green_curry.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/green_curry.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\nav_header.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_cheeseburger.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/cheeseburger.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_tiagos.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\tiagos.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_resturant.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_resturant.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_pizza_hut.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\pizza_hut.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_bacon_burger.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/bacon_burger.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_daily.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_daily.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_circle_bg.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/circle_bg.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_simply_asia.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\simply_asia.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_lasagna.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/lasagna.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_whopper.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\whopper.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_item_restaurant.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/item_restaurant.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_cart.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_margherita_pizza.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/margherita_pizza.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_pad_thai.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\pad_thai.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_menu.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_menu.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_garlic_bread.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\garlic_bread.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_garlic_bread.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/garlic_bread.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_recent_orders.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_recent_orders.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_frosted_bg.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/frosted_bg.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_bacon_burger.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\bacon_burger.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_button_outline.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_button_outline.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_delivery_4.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\delivery_4.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_mashed_potato.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/mashed_potato.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_fried_rice.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\fried_rice.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_zinger_burger.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/zinger_burger.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_mango_sticky_rice.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\mango_sticky_rice.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_bg_gradient_theme.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/bg_gradient_theme.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_item_cart.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\item_cart.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_main.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_main.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_cheesy_sticks.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/cheesy_sticks.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_item_reward.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\item_reward.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_roccomamas.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/roccomamas.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_resturant.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_resturant.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_simply_asia.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/simply_asia.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_food_dash.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_food_dash.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_rewards.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_rewards.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_budget.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_budget.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_setting.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_spaghetti.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\spaghetti.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_person.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_person.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_arrow_back.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\arrow_back.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_tiramisu.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/tiramisu.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\menu_menu_item.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\menu\\menu_item.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/menu_drawer_menu.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/menu/drawer_menu.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_item_restaurant.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\item_restaurant.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_fries.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\fries.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_coke.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/coke.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_delivery_4.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/delivery_4.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_veggie_pizza.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\veggie_pizza.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_fried_rice.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/fried_rice.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_cheesy_sticks.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\cheesy_sticks.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_tiagos.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/tiagos.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\menu\\drawer_menu.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_notofication.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_notofication.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_spinner_background.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/spinner_background.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_edittext_light.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_edittext_light.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_item_menu.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/item_menu.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_mashed_potato.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\mashed_potato.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_milkshake.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/milkshake.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_menu.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_menu.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_cofee.jpg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/cofee.jpg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_milkshake.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\milkshake.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ice_cream.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ice_cream.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_base_drawer.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_base_drawer.xml"
-    },
-    {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_daily.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_daily.png"
-    },
-    {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_pad_thai.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/pad_thai.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_image.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_image.xml"
     },
     {
         "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_home.xml.flat",
         "source": "com.example.greetandeat2.app-main-55:/layout/activity_home.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_spaghetti.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/spaghetti.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_roccomamas.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\roccomamas.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_spring_rolls.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/spring_rolls.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_notofication.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_notofication.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_chicken_nuggets.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/chicken_nuggets.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_button_white.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_button_white.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_kfc.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/kfc.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_chicken_wings.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\chicken_wings.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.greetandeat2.app-main-55:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_activity_payment.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\activity_payment.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_arrow_back.png.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/arrow_back.png"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_lasagna.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\lasagna.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_food_dash.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_food_dash.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_popcorn_chicken.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\popcorn_chicken.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_activity_splash.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\layout_item_menu.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\layout\\item_menu.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_burger_king.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/burger_king.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_purple_button.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_purple_button.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_chicken_wings.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/chicken_wings.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_spring_rolls.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\spring_rolls.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_button.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_button.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_money.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_money.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_pepperoni_pizza.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/pepperoni_pizza.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_notification.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_edittext_light.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_edittext_light.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_order.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_order.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_kfc.png.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\kfc.png"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_nav_header.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/nav_header.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_burger_king.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\burger_king.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/layout_layout_toolbar.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/layout/layout_toolbar.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_bg_main.jpg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\bg_main.jpg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_bg_main.jpg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/bg_main.jpg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_salad.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/salad.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_whopper.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/whopper.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_mango_sticky_rice.jpeg.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/mango_sticky_rice.jpeg"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_margherita_pizza.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\margherita_pizza.jpeg"
     },
     {
-        "merged": "com.example.greetandeat2.app-debug-53:/drawable_rounded_button_white.xml.flat",
-        "source": "com.example.greetandeat2.app-main-55:/drawable/rounded_button_white.xml"
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_salad.jpeg.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\salad.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_rounded_edittext.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\rounded_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_gradient_background.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\gradient_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_frosted_bg.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\frosted_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\drawable_bg_gradient_theme.xml.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\drawable\\bg_gradient_theme.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-debug-53:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kamil\\.gradle\\daemon\\8.13\\com.example.greetandeat2.app-main-55:\\mipmap-xhdpi\\ic_launcher_round.webp"
     }
 ]

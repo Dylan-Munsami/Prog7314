@@ -1565,6 +1565,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_grey
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1612,6 +1613,8 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gold
+color green
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2451,6 +2454,8 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color primarysColor
+color purple_200
 color purple_500
 color ripple_material_dark
 color ripple_material_light
@@ -2459,6 +2464,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color secondarysColor
 color silver
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
@@ -2471,6 +2477,7 @@ color textSecondary
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color whites
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3641,6 +3648,7 @@ drawable frosted_bg
 drawable garlic_bread
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gradient_background
 drawable gradient_bg
 drawable green_curry
 drawable ic_arrow_back_black_24
@@ -3670,6 +3678,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_notification
 drawable ic_notofication
 drawable ic_order
 drawable ic_person
@@ -3767,6 +3776,7 @@ drawable rounded_button_white
 drawable rounded_edittext
 drawable rounded_edittext_light
 drawable rounded_image
+drawable rounded_purple_button
 drawable salad
 drawable simply_asia
 drawable spaghetti
@@ -3855,6 +3865,7 @@ id actions
 id activeOrderCard
 id activity_chooser_view_content
 id add
+id addCardButton
 id adjust_height
 id adjust_width
 id advance
@@ -3878,6 +3889,7 @@ id autoHide
 id autoLimit
 id availableSpace
 id axisRelative
+id backButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3888,6 +3900,7 @@ id bgImage
 id biometricBtn
 id blocking
 id bottom
+id bottomLayout
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3909,10 +3922,17 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
-id cardMiniGame
+id cardCvv
+id cardExpiry
+id cardFoodDash
+id cardListLayout
+id cardName
+id cardNoOrder
+id cardNumber
 id cardOrderFood
 id cardRecentOrders
 id cardRewards
+id cardSection
 id cardTrackOrder
 id card_user
 id carryVelocity
@@ -4002,6 +4022,10 @@ id enterAlways
 id enterAlwaysCollapsed
 id entireSpace
 id escape
+id etCVV
+id etCardName
+id etCardNumber
+id etExpiry
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -4205,6 +4229,7 @@ id passwordInput
 id password_toggle
 id path
 id pathRelative
+id paymentMethodGroup
 id paymentsSection
 id peekHeight
 id percent
@@ -4215,10 +4240,13 @@ id postLayout
 id preferencesSection
 id pressed
 id progress
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rbCard
+id rbCash
 id rectangles
 id registerBtn
 id registerTitle
@@ -4235,6 +4263,7 @@ id rewardIcon
 id rewardTitle
 id rewardsRecycler
 id rewardsTitle
+id rgSavedCards
 id right
 id rightToLeft
 id right_icon
@@ -4377,6 +4406,7 @@ id tvMenuItemName
 id tvMenuItemPrice
 id tvOrderId
 id tvOrderStatus
+id tvOrdersToday
 id tvRestaurantTitle
 id tvRewardPoints
 id tvScore
@@ -4540,6 +4570,8 @@ layout activity_login
 layout activity_main
 layout activity_menu
 layout activity_payment
+layout activity_payment_methods
+layout activity_recent_orders
 layout activity_register
 layout activity_resturant
 layout activity_rewards
@@ -4564,6 +4596,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_add_card
 layout fingerprint_dialog_layout
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -4677,6 +4710,7 @@ string appbar_scrolling_view_behavior
 string avg_delivery
 string avoid_traffic
 string back
+string back_to_home
 string big_spender_desc
 string big_spender_title
 string big_spender_unlocked
@@ -4737,6 +4771,7 @@ string edit_profile
 string error_a11y_label
 string error_icon_content_description
 string estimated_delivery
+string estimated_delivery_time
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4900,13 +4935,19 @@ string mtrl_timepicker_confirm
 string nav_rail_collapsed_a11y_label
 string nav_rail_expanded_a11y_label
 string next
+string no_active_orders
+string no_orders_message
 string notifications
 string open
 string order_food
 string order_id
+string order_placed_just_now
 string order_progress
 string order_received
 string order_summary_placeholder
+string order_timeline
+string order_tracking
+string ordered
 string orders_today
 string out_for_delivery
 string password_toggle_content_description
@@ -4922,9 +4963,11 @@ string points
 string points_label
 string preferences
 string preparing
+string preparing_your_order
 string project_id
 string quantity
 string quick_actions
+string ready
 string ready_for_pickup
 string recent_orders
 string refresh
@@ -4953,6 +4996,7 @@ string theme
 string total
 string track_order
 string tracking
+string update_status
 string use_biometric_label
 string use_biometric_or_screen_lock_label
 string use_face_label
