@@ -1,6 +1,0 @@
-<!-- res/drawable/frosted_bg.xml -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="#80FFFFFF"/> <!-- 50% transparent white -->
-    <corners android:radius="25dp"/>
-</shape>
