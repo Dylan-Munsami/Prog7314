@@ -194,3 +194,10 @@ class Login : AppCompatActivity() {
         biometricPrompt.authenticate(promptInfo)
     }
 }
+
+
+// References:
+// Firebase Authentication guide: https://firebase.google.com/docs/auth/android/start
+// Google Sign-In integration: https://developers.google.com/identity/sign-in/android/start-integrating
+// Android Biometric authentication: https://developer.android.com/training/sign-in/biometric-auth
+// SharedPreferences for storing last used user: https://developer.android.com/training/data-storage/shared-preferences
