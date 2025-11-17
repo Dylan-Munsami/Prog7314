@@ -303,3 +303,11 @@ class TrackingActivity : BaseActivity() {
         } else android.R.drawable.ic_dialog_info
     }
 }
+
+// References:
+// Firebase Firestore/Room database access for local order tracking: https://developer.android.com/training/data-storage/room
+// Android Notification channels: https://developer.android.com/training/notify-user/channels
+// NotificationCompat usage: https://developer.android.com/reference/androidx/core/app/NotificationCompat
+// Android lifecycleScope and coroutines: https://developer.android.com/kotlin/coroutines
+// Handling notification permissions (Android 13+): https://developer.android.com/about/versions/13/behavior-changes-13#notifications
+
