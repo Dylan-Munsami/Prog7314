@@ -80,3 +80,9 @@ class FoodDashGameActivity : BaseActivity() {
         btnPlayAgain.visibility = View.VISIBLE
     }
 }
+
+// References:
+// Custom GameView implementation inspired by Android Canvas tutorial: https://developer.android.com/training/custom-views/custom-drawing
+// SharedPreferences for storing high scores: https://developer.android.com/training/data-storage/shared-preferences
+// View visibility handling: https://developer.android.com/reference/android/view/View
+// Toolbar and drawer layout setup: https://developer.android.com/guide/navigation/navigation-ui
