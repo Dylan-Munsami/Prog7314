@@ -63,3 +63,9 @@ class OfflineRepository(private val database: AppDatabase) {
         }
     }
 }
+
+// References:
+// Android Room database documentation: https://developer.android.com/training/data-storage/room
+// Kotlin coroutines for database operations: https://kotlinlang.org/docs/coroutines-overview.html
+// Repository pattern best practices: https://developer.android.com/jetpack/guide
+
