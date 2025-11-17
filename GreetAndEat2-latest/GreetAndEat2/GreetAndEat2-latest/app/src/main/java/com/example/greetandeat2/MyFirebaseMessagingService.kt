@@ -288,19 +288,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         android.util.Log.d("FCM_DEBUG", "FCM Token: $token")
         android.util.Log.d("FCM_DEBUG", "User ID: $userId")
 
-        // If you want to send to your server, implement this:
-        /*
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                // Your API call here
-                // Example: ApiClient.service.registerFCMToken(userId, token)
-                android.util.Log.d("FCM_DEBUG", "Token sent to server successfully")
-            } catch (e: Exception) {
-                android.util.Log.e("FCM_DEBUG", "Failed to send token to server", e)
-            }
-        }
-        */
-    }
+       
 
     // Helper function to check if a drawable exists
     private fun hasDrawable(resId: Int): Boolean {
@@ -321,3 +309,11 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 }
+
+// References:
+// Firebase Cloud Messaging (FCM) documentation: https://firebase.google.com/docs/cloud-messaging
+// Android Notifications guide: https://developer.android.com/guide/topics/ui/notifiers/notifications
+// Notification channels: https://developer.android.com/training/notify-user/channels
+// Kotlin coroutines for background tasks: https://kotlinlang.org/docs/coroutines-overview.html
+// FirebaseAuth current user usage: https://firebase.google.com/docs/auth/android/manage-users
+
