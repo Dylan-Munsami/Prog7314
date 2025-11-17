@@ -112,3 +112,10 @@ class RecentOrdersActivity : AppCompatActivity() {
         }
     }
 }
+
+// References:
+// Android Room database for retrieving recent orders: https://developer.android.com/training/data-storage/room
+// FirebaseAuth current user: https://firebase.google.com/docs/auth/android/manage-users
+// Kotlin coroutines for main thread UI updates: https://kotlinlang.org/docs/coroutines-overview.html
+// Dynamic creation of views (CardView, LinearLayout, TextView): https://developer.android.com/reference/android/widget/LinearLayout
+
