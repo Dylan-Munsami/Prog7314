@@ -56,7 +56,7 @@ The app must run on a mobile device — not the emulator.
 Clone the Repository
 
 Open a terminal or Git Bash:
-git clone https://github.com/Dylan-Munsami/GreetAndEat2.git
+git clone https://github.com/Dylan-Munsami/Prog7314
 
 Open the project in Android Studio:
 File → Open → Select “GreetAndEat2” Folder  (Gradle will automatically download and sync all dependencies.)
