@@ -1,226 +1,518 @@
-# ProgApi
+GreetAndEat2 – Food Ordering, Rewards & Delivery Tracking App
 
-GitHub Repo-- https://github.com/Dylan-Munsami/ProgApi.git 
+Final PROG7314 POE Submission
+Android | Kotlin | Firebase | Render API | RoomDB | GitHub Actions
 
-Render.com – Creation of the API
 
- 
+🚀 Project Overview
 
+GreetAndEat2 is a modern Android food-ordering application designed for the PROG7314 module.
+The app allows users to browse restaurants, place orders, track deliveries in real time, earn loyalty rewards, and enjoy offline functionality through RoomDB.
 
- 
- 
+This project demonstrates full-stack mobile development using:
 
+Firebase Authentication (SSO login, secure identity)
 
- 
+Firebase Cloud Messaging (FCM) (real-time notifications)
 
- 
+Render-hosted REST API (order creation & order tracking)
 
-GreetAndEat2 – Android Food Ordering & Rewards App
+RoomDB (offline mode & local caching)
 
-GreetAndEat2 is a modern Android application built with **Kotlin** and **XML**, designed to let users browse restaurants, place orders, and earn loyalty rewards.  
-The app provides a clean, user-friendly interface and demonstrates key Android development concepts including Activities, RecyclerViews, custom Adapters, and Firebase/Room integration.
+GitHub Actions (automated testing & CI builds)
 
-Overview
+Material Design 3 UI
 
-GreetAndEat2** allows users to:
-- Register and log in securely.
-- Browse restaurant menus.
-- Add food items to a cart and view total costs.
-- Access the exclusive **2000 Club** rewards program.
-- Earn and claim rewards (Gold, Silver, Bronze tiers).
-- Manage their profiles and view order history.
+The application is fully functional, runs on a real Android device, and meets all PROG7314 POE requirements.
 
-This app combines design simplicity with robust architecture for an enjoyable user experience.
 
 
-Key Features 
+How to Run the Application
 
+This section explains how to build, install, and run GreetAndEat2 on a real Android device, as required for the PROG7314 POE.
 
-User Authentication 
+Prerequisites
 
-Register > Log In > Manage user Data
+Before running the app, ensure you have:
 
-Menu and Ordering 
+✅ Android Studio (latest version)
 
-View available food items and add them to cart.
+https://developer.android.com/studio
 
-Checkout Flow 
+✅ A real Android device
 
-Proceed with simulated payment or confirmation screens
+Android 8.0 (API 26) or higher
 
-Reward System 
+At least 1GB free storage
 
+Developer mode enabled
 
-Tiered Rewards 
+❗ Required for POE
 
-Bronze, Silver, and Gold levels with customizable icons and colors.
+The app must run on a mobile device — not the emulator.
 
-Persistent Background 
 
-Consistent background image across all app screens for branding
 
-Modern Ui Components 
+Clone the Repository
 
-CardViews , RecyclerViews, Buttons, and custom XML layouts.
+Open a terminal or Git Bash:
+git clone https://github.com/Dylan-Munsami/GreetAndEat2.git
 
-Firebase Ready 
+Open the project in Android Studio:
+File → Open → Select “GreetAndEat2” Folder  (Gradle will automatically download and sync all dependencies.)
 
-Easy integration for authentication and real-time data (optional)
 
 
-Tech Stack
 
+Configure Firebase (Optional but recommended)
 
-Language > Kotlin
+If the app detects that Firebase is not configured, it falls back to offline mode.
 
-UI “XML Layout” with Material Design Components 
+To enable full features:
 
-Database > “Room/Firebase Realtime Database”
+1-Go to https://console.firebase.google.com
 
-Image Management “ImageView”, drawable resources 
+2-Create a new Firebase project
 
-Tools>
+3-Add an Android app
 
-Android studio Gradle 
+4-Download google-services.json
 
 
+5-Place the file into:
 
+app/src/main/
 
+Sync Gradle again.
 
----
 
- Installation & Setup
 
-1. **Clone the project**
-   ```bash
-   git clone https://github.com/yourusername/GreetAndEat2.git
+Build the Project (APK)
 
+In Android Studio:
 
+Build → Build Bundle(s) / APK(s) → Build APK(s)
 
 
+When the build completes, click locate to find your APK:
 
+/app/release/app-release.apk
 
-Project Structure 
+5️⃣ Enable Developer Mode on Your Phone
 
-app/
-├── java/
-│ └── com.example.greetandeat2/
-│ ├── Home.kt
-│ ├── Login.kt
-│ ├── Register.kt
-│ ├── RewardsAdapter.kt
-│ ├── Reward.kt
-│ ├── RewardLevel.kt
-│ └── MainMenu.kt
-├── res/
-│ ├── layout/
-│ │ ├── activity_home.xml
-│ │ ├── activity_login.xml
-│ │ ├── activity_register.xml
-│ │ ├── activity_rewards.xml
-│ │ └── item_reward.xml
-│ ├── drawable/
-│ │ ├── bg_main.png
-│ │ └── rounded_button.xml
-│ ├── values/
-│ │ ├── colors.xml
-│ │ ├── styles.xml
-│ │ └── strings.xml
-└── AndroidManifest.xml
+On your Android device:
 
+Settings → About Phone → Tap “Build Number” 7 times  
+Settings → Developer Options → Enable USB Debugging
 
+6️⃣ Install the APK on a Real Device
+Method A — Android Studio (Recommended)
 
----
- Installation & Setup
+Connect your phone via USB
 
-1. **Clone the project**
-   ```bash
-   git clone https://github.com/yourusername/GreetAndEat2.git
+Select your device from Device Manager
 
+Click Run ▶
 
+Method B — Manual Installation
 
-2. Open in Android Studio
+Transfer the APK to your phone
 
-Open the cloned folder with Android Studio.
+Open the APK
 
-Let Gradle sync all dependencies automatically.
+Allow "Install from unknown sources"
 
+Tap Install
 
-3. In your Buil.gradle:
+7️⃣ Running the API (ProgApi)
+Option A — Use the hosted Render API (already deployed)
+
+Nothing to set up — the app connects automatically to:
+
+https://progapi-service.onrender.com
+
+Option B — Run locally (optional)
+git clone https://github.com/Dylan-Munsami/ProgApi.git
+npm install
+npm start
+
+
+Then update BASE_URL inside the app:
+
+const val BASE_URL = "http://10.0.2.2:3000/"
+
+8️⃣ Log In / Test Accounts
+
+You can register a new account directly from the app.
+
+OR use existing test accounts:
+
+Email:   testuser@gmail.com
+Pass:    Test1234
+
+
+Biometric authentication appears after first successful login.
+
+9️⃣ Using the App
+
+Once installed:
+
+Log in / register
+
+Select a restaurant
+
+Add items to cart
+
+Checkout
+
+Track order with live updates
+
+Receive push notifications
+
+Offline mode automatically activates if the device loses internet.
+
+🔧 Troubleshooting
+Issue	Fix
+Firebase not connecting	Ensure google-services.json is added correctly
+API not responding	Use the Render URL or start local server
+Notifications not arriving	Ensure device has Google Play Services
+Biometric prompt not showing	Register biometrics in the phone settings
+
+
+
+
+
+🏗 System Architecture
+
+GreetAndEat2 uses a Hybrid Cloud + Offline-First Architecture:
+
+
+
+| Layer                  | Technology                 | Purpose                               |
+| ---------------------- | -------------------------- | ------------------------------------- |
+| **Frontend (Android)** | Kotlin, XML, Material 3    | UI, app logic, user interactions      |
+| **Backend API**        | Render (REST API)          | Order creation, updates, tracking     |
+| **Cloud Services**     | Firebase Auth + FCM        | Authentication + notifications        |
+| **Local Storage**      | RoomDB                     | Offline mode, caching, cart & history |
+| **Security**           | EncryptedSharedPreferences | Protect stored credentials            |
+
+
+🔄 High-Level Flow
+
+User logs in (Firebase Auth / Biometrics)
+
+App fetches restaurants & menu
+
+Order is created → API (Render)
+
+Realtime updates → FCM notifications
+
+Offline data stored in RoomDB
+
+User tracks order progress visually
+
+
+
+
+
+
+
+
+🔑 Core Features
+1️⃣ User Authentication
+
+Email + Password login
+
+Google Sign-In
+
+Biometric login (Fingerprint / FaceID)
+
+Secure token handling with EncryptedSharedPreferences
+
+Firebase Authentication backend
+
+2️⃣ Menu & Ordering
+
+Browse restaurants
+
+View menu items
+
+Add items to cart
+
+Cart persistence even offline
+
+Checkout flow with payment simulation
+
+3️⃣ Order Management & Tracking
+
+Orders sent to custom Render API
+
+Order ID returned to the app
+
+Real-time order progress (Ordered → Preparing → Ready → Delivered)
+
+Timeline & progress bar
+
+4️⃣ Real-Time Notifications
+
+FCM push notifications for order status
+
+Backend triggered messages
+
+Works in background
+
+5️⃣ Rewards System
+
+Tiered points system (Bronze / Silver / Gold)
+
+Auto-calculated from order activity
+
+Stored in RoomDB for offline visibility
+
+6️⃣ Offline Mode (RoomDB)
+
+Local caching of:
+
+Orders
+
+Cart items
+
+Rewards
+
+User activity
+
+App functions without internet
+
+Syncs when connection is restored
+
+7️⃣ Mini-Game: Food Delivery Dash
+
+Custom arcade-style mini-game
+
+Points & best score tracking
+
+Adds gamification to the app
+
+8️⃣ Multi-Language Support
+
+English
+
+Afrikaans
+
+isiXhosa
+
+9️⃣ Settings & Personalisation
+
+Edit profile
+
+Change password
+
+Theme toggle (Dark Mode)
+
+Notification toggle
+
+Language selector
+
+
+
+🌐 Backend (ProgApi) – Render-Hosted REST API
+🔗 Repository
+
+https://github.com/Dylan-Munsami/ProgApi.git
+
+The API handles:
+✔ Creating orders
+✔ Updating order statuses
+✔ Returning order information
+✔ Triggering notifications (via Firebase)
+
+All requests are performed over HTTPS for security.
+
+🗄 Database Structure
+🔹 Firebase Authentication
+
+Stores user credentials
+
+Generates secure tokens
+
+Manages sessions
+
+🔹 RoomDB (Local NoSQL Database)
+
+Tables include:
+
+orders
+
+cart_items
+
+rewards
+
+recent_activities
+
+Used for:
+✔ Offline order history
+✔ Cart persistence
+✔ Fast local reads
+✔ Efficient caching
+
+🔔 Notifications Workflow (FCM)
+
+Triggered when:
+
+Order status changes
+
+Rewards are unlocked
+
+FCM sends push notifications directly to the user device.
+
+🔧 GitHub Actions – Automated Testing
+
+The repository includes:
+
+CI pipeline to build the APK
+
+Automated unit test runner
+
+Workflow file (build.yml)
+
+Purpose:
+
+Ensures code builds correctly on every push
+
+Validates functionality across devices
+
+Satisfies POE automation requirement
+
+
+
+
+
+
+
+📥 Installation Guide
+1. Clone the project
+git clone https://github.com/Dylan-Munsami/GreetAndEat2.git
+
+2. Open Project
+
+Open with Android Studio → let Gradle sync.
+
+3. Add Dependencies
+
+Required libraries:
 
 implementation("androidx.recyclerview:recyclerview:1.3.2")
 implementation("androidx.cardview:cardview:1.0.0")
 implementation("com.google.android.material:material:1.12.0")
 
-4. Add your background image
+4. Firebase Setup (Optional)
 
-Copy your background image (bg_main.png) into:
+Add google-services.json inside:
 
-app/src/main/res/drawable/
+/app/src/main/
 
->>Ensure the XML references it properly:
-android:src="@drawable/bg_main"
+5. Run on a real device
 
+App is optimized for mobile hardware (POE requirement).
 
-5. Optional – Connect Firebase
+🛠 Project Structure
+app/
+├── java/
+│   └── com.example.greetandeat2/
+│       ├── activities/
+│       ├── adapters/
+│       ├── models/
+│       ├── offline/
+│       ├── api/
+│       └── utils/
+├── res/
+│   ├── layout/
+│   ├── drawable/
+│   ├── values/
+└── AndroidManifest.xml
 
-Create a Firebase project and download google-services.json.
+🗒 Release Notes – Final POE Version
+Part 1 – Planning & Design
 
-Place it inside:
+Completed app design document
 
+UI mockups
 
+API architecture & UML diagrams
 
+Feature lists & requirements
 
-How It Works
+Part 2 – Prototype Development
 
--The Main Menu Activity serves as the navigation hub for users.
+Implemented login, registration, and settings
 
--The RewardsAdapter binds reward data (title, description, icon, tier) to each CardView in the RecyclerView.
+Built basic REST API
 
--The Reward model class defines each reward’s properties and tier.
+Menu & ordering prototype
 
--Users can click on rewards to claim them, which triggers the onClick   callback.
+Added dark mode
 
--The background image is set globally for consistent branding. 
+Initial RoomDB structure
 
+Final POE – Completed Features
 
-UI Design Highlights
+✔ Fully working Render API
+✔ Firebase Auth integrated
+✔ Biometric login
+✔ Push notifications (FCM)
+✔ Complete ordering flow
+✔ Real-time order tracking
+✔ Rewards system
+✔ Mini-game
+✔ Multi-language
+✔ Offline mode (RoomDB)
+✔ GitHub Actions automation
+✔ Professional UI upgrade
+✔ App runs on mobile device
+✔ Video demo completed
 
--Consistent color palette using colors.xml
+🤖 AI Tool Transparency (Required for POE)
 
--Rounded buttons and elevated cards
+AI tools (ChatGPT) were used only to:
 
--Transparent background overlay using android:alpha
+Generate documentation structures
 
--Professional typography and spacing for readability
+Improve clarity of written content
 
--Tier-based color highlights for rewards
+Suggest UI/UX improvements
 
+Provide explanations during debugging
 
+Assist with diagram creation
 
-Contributors
+AI was NOT used to:
 
+Generate application code
 
-Dylan Munsami 
+Build layouts
 
-Kamil Maharaj 
+Construct API logic
+
+Develop features
+
+All development — Kotlin code, XML layouts, API, RoomDB, Firebase integration, and UI design — was completed manually by the project team.
+
+👥 Contributors
+
+Dylan Munsami
+
+Kamil Maharaj
 
 Rushalen Delomoneys
 
-Idris Khan 
+Idris Khan
 
 Imaad Kajee
 
-
 📄 License
 
-This project is released under the MIT License.
-Feel free to use, modify, and distribute as long as credit is provided.
+MIT License
+Free for educational and non-commercial reuse.
 
 
 
-💬 Feedback
-
-If you’d like to suggest improvements or report bugs, please open an issue or contact the project author.
-
-GreetAndEat2 – Bringing flavor, convenience, and rewards to your fingertips
